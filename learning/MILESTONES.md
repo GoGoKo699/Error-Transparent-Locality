@@ -225,7 +225,7 @@ A **central question** identifies the issue a milestone resolves. Its **understa
 
 **Central question.** How can an operation on observables distinguish identity from nonidentity at one site?
 
-**Understanding target.** The average $\mathcal R_i(B)=(B+X_iBX_i+Y_iBY_i+Z_iBZ_i)/4$ retains the identity component at site $i$. Summing $\mathrm{Id}-\mathcal R_i$ over sites produces a superoperator whose eigenvalue on a weight-$w$ Pauli is $w$. This is a mathematical device, not an added physical noise process.
+**Understanding target.** The average $\mathcal R_i(B)=(B+X_iBX_i+Y_iBY_i+Z_iBZ_i)/4$ retains the identity component at site $i$. Summing $\mathrm{Id}-\mathcal R_i$ over sites produces a superoperator whose eigenvalue on a Pauli of weight $w$ is $w$. This is a mathematical device, not an added physical noise process.
 
 **Earlier dependencies.** [M02](#m02), [M03](#m03), [M14](#m14).
 

@@ -85,7 +85,7 @@ The elementary weak-duality calculation is already useful. For any feasible mass
 p(0)=\sum_w a_wp(w)\le\sum_w|a_w|.
 ```
 
-Thus a polynomial and a signed mass distribution with equal values are an exact optimality certificate. If $|\mathcal S|\le t$, a degree-at-most-$t$ polynomial vanishing on $\mathcal S$ but not at zero proves that the moment constraints are infeasible. This recovers the requirement for at least $t+1$ contributing weights.
+Thus a polynomial and a signed mass distribution with equal values are an exact optimality certificate. If $|\mathcal S|\le t$, a polynomial of degree at most $t$ vanishing on $\mathcal S$ but not at zero proves that the moment constraints are infeasible. This recovers the requirement for at least $t+1$ contributing weights.
 
 ### A finite formula without a numerical optimizer
 
@@ -95,7 +95,7 @@ For ordered nodes $w_0<\cdots<w_t$ in $\mathcal S$, the unique moment solution i
 
 ```math
 a_{w_j}=\prod_{k\ne j}\frac{-w_k}{w_j-w_k},
-\qquad \operatorname{sign}(a_{w_j})=(-1)^j.
+\qquad \mathrm{sign}(a_{w_j})=(-1)^j.
 ```
 
 Consequently,
@@ -273,7 +273,7 @@ Expanding $P$ and using the single-error twirl gives the exactly normalized expr
 
 ```math
 H_L^{\rm can}
-=\sum_{S\in\mathcal G}\left(1-\frac{\operatorname{wt}(LS)}{4}\right)LS.
+=\sum_{S\in\mathcal G}\left(1-\frac{\mathrm{wt}(LS)}{4}\right)LS.
 \tag{C15}
 ```
 
@@ -311,14 +311,14 @@ First, missing logical weights strengthen the moment problem. The five-qubit cod
 Second, the dual polynomial gives a precise equality condition. Put $f_Q=\ell(V^\dagger QV)$. For an optimal dual polynomial $p$,
 
 ```math
-\omega p(0)=\sum_Qh_Q f_Qp(\operatorname{wt}Q)\le J.
+\omega p(0)=\sum_Qh_Q f_Qp(\mathrm{wt}(Q))\le J.
 ```
 
 If equality holds, every nonidentity Pauli with a nonzero coefficient must satisfy
 
 ```math
-|f_Q|=1,\qquad |p(\operatorname{wt}Q)|=1,
-\qquad h_Qf_Qp(\operatorname{wt}Q)>0.
+|f_Q|=1,\qquad |p(\mathrm{wt}(Q))|=1,
+\qquad h_Qf_Qp(\mathrm{wt}(Q))>0.
 \tag{C17}
 ```
 

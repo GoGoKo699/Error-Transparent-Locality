@@ -4,7 +4,7 @@ The assumptions and resource definitions are in the [model](model.md). The centr
 
 ## 1. Logical weight components
 
-Write $H=\sum_w H_w$. For a logical operator $B$, define its scalar-free part by $[B]_0=B-\operatorname{tr}(B)I_K/K$. Let
+Write $H=\sum_w H_w$. For a logical operator $B$, define its scalar-free part by $[B]_0=B-\mathrm{tr}(B)I_K/K$. Let
 
 ```math
 A_w=[V^\dagger H_wV]_0,
@@ -32,14 +32,14 @@ For each physical qubit define the complete Pauli twirl on observables,
 \tag{L3}
 ```
 
-If a tensor Pauli has identity at site $i$, $\mathcal R_i$ leaves it unchanged; otherwise the twirl sends it to zero. Thus every weight-$w$ Pauli is an eigenoperator of $\mathcal W$ with eigenvalue $w$, and
+If a tensor Pauli has identity at site $i$, $\mathcal R_i$ leaves it unchanged; otherwise the twirl sends it to zero. Thus every Pauli of weight $w$ is an eigenoperator of $\mathcal W$ with eigenvalue $w$, and
 
 ```math
 \mathcal W^j(H)=\sum_w w^j H_w.
 \tag{L4}
 ```
 
-Each factor in $\mathcal W$ is a linear combination of the identity map and one-site Pauli conjugations. Expanding $\mathcal W^j$ gives a real linear combination of maps $B\mapsto E^\dagger BE$ with $\operatorname{wt}(E)\le j$. Repeated sites can reduce that weight. Pauli product phases cancel in conjugation. The expansion coefficients sum to zero for $j\ge1$, because every conjugation fixes $I$ whereas $\mathcal W^j(I)=0$.
+Each factor in $\mathcal W$ is a linear combination of the identity map and one-site Pauli conjugations. Expanding $\mathcal W^j$ gives a real linear combination of maps $B\mapsto E^\dagger BE$ with $\mathrm{wt}(E)\le j$. Repeated sites can reduce that weight. Pauli product phases cancel in conjugation. The expansion coefficients sum to zero for $j\ge1$, because every conjugation fixes $I$ whereas $\mathcal W^j(I)=0$.
 
 From transparency, including the allowed scalar shifts,
 

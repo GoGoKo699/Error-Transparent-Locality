@@ -26,9 +26,9 @@ They commute with every generator and anticommute with each other.
 
 ### Distance and degeneracy
 
-The $Z$-check column at a site is the syndrome of its $X$ error; the $X$-check column is the syndrome of its $Z$ error. In the row order above these columns are
+The $Z$ check column at a site is the syndrome of its $X$ error; the $X$ check column is the syndrome of its $Z$ error. In the row order above these columns are
 
-| Site | $Z$-check column | $X$-check column |
+| Site | $Z$ check column | $X$ check column |
 |---:|:---:|:---:|
 | 1 | 1000 | 0110 |
 | 2 | 0101 | 0101 |
@@ -40,7 +40,7 @@ The $Z$-check column at a site is the syndrome of its $X$ error; the $X$-check c
 | 8 | 1110 | 0001 |
 | 9 | 0001 | 1000 |
 
-Every column is nonzero. The $X$-check columns are all distinct. The only repeated $Z$-check column occurs at sites five and nine. A Pauli normalizer of weight at most two must therefore be the identity or $X_5X_9$, and the latter is a stabilizer. Mixed $X/Z$ support cannot evade the two independent syndrome tests. There is no nontrivial logical operator of weight one or two, while (F1) gives weight-three logical operators. The code has parameters $[[9,1,3]]$.
+Every column is nonzero. The $X$ check columns are all distinct. The only repeated $Z$ check column occurs at sites five and nine. A Pauli normalizer of weight at most two must therefore be the identity or $X_5X_9$, and the latter is a stabilizer. Mixed $X/Z$ support cannot evade the two independent syndrome tests. There is no nontrivial logical operator of weight one or two, while (F1) gives weight-three logical operators. The code has parameters $[[9,1,3]]$.
 
 The code is degenerate: $X_5$ and $X_9$ have the same encoded action up to their stabilizer product. Nondegeneracy is not needed for correction or for the locality theorem.
 
@@ -128,7 +128,7 @@ Their total absolute sum is seven. Scaling by $\Omega$ gives logical half-splitt
 
 ## 5. Energy plateaus and quantum coherence
 
-Let $\mathcal C\subset\mathbb F_2^9$ be the kernel of the four $Z$-check rows, and let $\mathcal D\subset\mathcal C$ be the row space of the four $X$ checks. They have sizes 32 and 16. A logical basis is
+Let $\mathcal C\subset\mathbb F_2^9$ be the kernel of the four $Z$ check rows, and let $\mathcal D\subset\mathcal C$ be the row space of the four $X$ checks. They have sizes 32 and 16. A logical basis is
 
 ```math
 |0_L\rangle=\frac14\sum_{b\in\mathcal D}|b\rangle,

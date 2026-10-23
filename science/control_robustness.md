@@ -75,7 +75,7 @@ The residual unitary relative to the **realized no-fault gate** is $e^{+2iB_i(\t
 \tag{C5}
 ```
 
-For a no-fault or $Z$-fault branch, $\delta=\Delta A$. Thus ordinary angle calibration and fault-dependent phase distortion are distinct contributions, with explicit signs.
+For a no-fault or $Z$ fault branch, $\delta=\Delta A$. Thus ordinary angle calibration and fault-dependent phase distortion are distinct contributions, with explicit signs.
 
 For one deterministic branch, the entanglement infidelity, average gate infidelity, and diamond norm distance from the intended gate are
 
@@ -124,28 +124,28 @@ p_{\mathrm{nf}}+
 The resulting metrics are exact:
 
 ```math
-F_e=\frac{1+\operatorname{Re}\chi}{2},
+F_e=\frac{1+\mathrm{Re}\,\chi}{2},
 \qquad
-1-F_{\mathrm{avg}}=\frac{1-\operatorname{Re}\chi}{3},
+1-F_{\mathrm{avg}}=\frac{1-\mathrm{Re}\,\chi}{3},
 \qquad
 \|\mathcal E_{\mathrm{rel}}-\mathrm{Id}\|_\diamond=|1-\chi|.
 \tag{C10}
 ```
 
-For the last identity, the difference map has zero diagonal action and off-diagonal multiplier $\chi-1$. Up to a $Z$ rotation it is $|\chi-1|(\mathrm{Id}-\operatorname{Ad}_Z)/2$. Its diamond norm is $|\chi-1|$, attained on the state $|+\rangle$.
+For the last identity, the difference map has zero diagonal action and off-diagonal multiplier $\chi-1$. Up to a $Z$ rotation it is $|\chi-1|(\mathrm{Id}-\mathrm{Ad}_Z)/2$. Its diamond norm is $|\chi-1|$, attained on the state $|+\rangle$.
 
 As an example, take constant incidence error $b_i(t)=\beta_i$ and condition on an $X_i$ or $Y_i$ fault with uniform time in $[0,T]$. Then
 
 ```math
-\chi=e^{-2i\Delta A}e^{2i\beta_iT}\operatorname{sinc}(2\beta_iT),
-\qquad \operatorname{sinc}(x)=\frac{\sin x}{x}.
+\chi=e^{-2i\Delta A}e^{2i\beta_iT}\mathrm{sinc}(2\beta_iT),
+\qquad \mathrm{sinc}(x)=\frac{\sin x}{x}.
 \tag{C11}
 ```
 
 At $\Delta A=0$ this gives
 
 ```math
-1-F_e=\frac{1-\operatorname{sinc}(4\beta_iT)}2
+1-F_e=\frac{1-\mathrm{sinc}(4\beta_iT)}2
 =\frac43(\beta_iT)^2+O((\beta_iT)^4).
 ```
 
@@ -158,7 +158,7 @@ Let $M_{iS}=\mathbf 1_{i\in S}$ be the site-incidence matrix and $c$ the coeffic
 For the **fixed nine supports**, $M$ has rank eight and
 
 ```math
-\ker M=\operatorname{span}\{c\}.
+\ker M=\mathrm{span}\{c\}.
 \tag{C12}
 ```
 
