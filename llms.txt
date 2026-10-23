@@ -2,7 +2,7 @@
 
 > Exact interaction-order and native Pauli coupling bounds for continuous error-transparent logical Hamiltonians, with a certified four-body single-axis construction.
 
-## Authoritative scientific account
+## Scientific story: what is established and why?
 
 - [Overview](science/README.md): supported results and their logical dependencies.
 - [Model](science/model.md): fixed-code assumptions, full error-sector identities, scalar shifts, and resource definitions.
@@ -12,7 +12,19 @@
 - [Control robustness](science/control_robustness.md): coefficient errors, fault-time phases, classical channel mixtures, and pulse schedules.
 - [Interpretation](science/interpretation.md): physical meaning and boundaries of the comparison.
 
-## Evidence and prior work
+## Theorem route: what assumptions support the bounds?
+
+Read the model before the locality proof, then the coupling account. The full physical-space intertwining identity is the hypothesis; logical compression alone does not establish transparency. The weight-moment argument proves the universal obstruction. The scalar moment problem is a necessary relaxation, whose general optimum need not be physically attainable. The four-body construction and the established five-qubit benchmark attain the stated single-error bounds at their respective interaction orders.
+
+## Study route: how does Preskill lead to this project?
+
+- [Learning entry](learning/README.md): one selected source and the relation between the study and specialist routes.
+- [Preskill bridge](learning/PRESKILL_BRIDGE.md): Chapter 7, updated March 2026; targeted sections, notation translation, assumptions, and the additional twirl, moment, coupling, and control steps.
+- [Thirty milestones](learning/MILESTONES.md): M01-M13 establish the background; M14-M30 build the research argument. Follow the earlier dependencies and scientific pointers attached to each target.
+
+The selected educational anchor is Preskill's Quantum Information, Chapter 7, Quantum Error Correction. Research references supply attribution and comparisons. The shared learning map describes scientific understanding targets and their dependencies.
+
+## Reproduction and attribution: what can be checked?
 
 - [Verification](verification/README.md): standard-library exact checks; run python verification/run_all.py.
 - [Construction data](verification/data/nine_qubit.json): one-based sites, positive stabilizer generators, bare Hermitian Pauli coefficients.
@@ -21,4 +33,6 @@
 
 ## Claim boundaries
 
-The four-body construction proves one logical axis on a nine-qubit distance-three code. It does not prove universal four-body control, minimal qubit count, or a complete hardware advantage. Higher-error moment costs are necessary bounds without asserted physical saturation. Native coupling sums do not include recovery or gadget synthesis. The canonical five-qubit protected construction is prior work. The general theorem does not cover arbitrary moving-code, circuit, or dissipative schemes.
+Correctability repairs an error after storage; exact transparency additionally preserves logical evolution through its unknown arrival time. Interaction order is an individual Pauli term's weight, distinct from total support or geometric range. The native coupling sum is distinct from an operator norm and from complete hardware cost. Preskill's stabilizer phase convention is translated in the bridge; native Hamiltonian coefficients multiply Hermitian Paulis.
+
+The four-body construction proves one logical axis on a nine-qubit distance-three code. It does not prove universal four-body control, minimal qubit count, or a complete hardware advantage. Higher-error moment costs are necessary bounds without asserted physical saturation. Native coupling sums do not include recovery or gadget synthesis. The canonical five-qubit protected construction is prior work. The general theorem does not cover arbitrary moving-code, circuit, or dissipative schemes. Commuting terms with correct integrated areas can still lose transparency when applied sequentially. Exact finite certificates complement the analytical proofs and do not replace them.
