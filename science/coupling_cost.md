@@ -9,20 +9,18 @@ The general bounds allow arbitrary logical dimension. Their energy scale is the 
 Use the fixed code, detection distance $d\ge2t+1$, exact transparency condition, and native Pauli expansion from the [model](model.md). Consistent scalar error-sector shifts are allowed. Write
 
 ```math
-H=\sum_{Q}h_QQ=\sum_wH_w,\qquad
+\text{(C1)}\qquad H=\sum_{Q}h_QQ=\sum_wH_w,\qquad
 J=\sum_{Q\ne I}|h_Q|,
 \qquad
 \omega=\frac{\lambda_{\max}(h_L)-\lambda_{\min}(h_L)}{2}>0.
-\tag{C1}
 ```
 
 Let $A_w=[V^\dagger H_wV]_0$ and $A=[h_L]_0$. The established identities are
 
 ```math
-A_w=0\ (w\lt d),\qquad
+\text{(C2)}\qquad A_w=0\ (w\lt d),\qquad
 \sum_w A_w=A,\qquad
 \sum_w w^jA_w=0\ (1\le j\le t).
-\tag{C2}
 ```
 
 Choose normalized eigenvectors $|+\rangle,|-\rangle$ of $h_L$ for its largest and smallest eigenvalues. Define the real linear functional
@@ -36,11 +34,10 @@ It annihilates scalars, satisfies $\ell(A)=\omega$, and obeys $|\ell(V^\dagger Q
 Set $a_w=\ell(A_w)/\omega$. Then
 
 ```math
-\sum_w a_w=1,\qquad
+\text{(C3)}\qquad \sum_w a_w=1,\qquad
 \sum_w w^ja_w=0\quad(1\le j\le t),
 \qquad
 \frac{J}{\omega}\ge\sum_w|a_w|.
-\tag{C3}
 ```
 
 The identity Pauli has zero witness and does not contribute to either side. Nonidentity terms with scalar compression still consume budget; they cannot weaken this inequality.
@@ -52,18 +49,16 @@ Let $\mathcal S$ be a finite set of positive weights containing every weight tha
 Define
 
 ```math
-B_t(\mathcal S)=
+\text{(C4)}\qquad B_t(\mathcal S)=
 \min_{\{a_w\}}
 \left\{\sum_{w\in\mathcal S}|a_w|:
 \sum_{w\in\mathcal S}a_ww^j=\delta_{j0},\ 0\le j\le t\right\}.
-\tag{C4}
 ```
 
 Every Hamiltonian in the stated model obeys
 
 ```math
-\boxed{J\ge B_t(\mathcal S)\,\omega.}
-\tag{C5}
+\text{(C5)}\qquad \boxed{J\ge B_t(\mathcal S)\,\omega.}
 ```
 
 This is the strongest lower bound obtained from these scalar moments alone. It is a relaxation of physical Hamiltonian synthesis: a feasible collection of weight masses need not come from a code and an error-transparent Hamiltonian.
@@ -73,10 +68,9 @@ This is the strongest lower bound obtained from these scalar moments alone. It i
 Finite-dimensional linear-programming duality gives
 
 ```math
-B_t(\mathcal S)=
+\text{(C6)}\qquad B_t(\mathcal S)=
 \max_{p}\left\{p(0):\deg p\le t,
 \ |p(w)|\le1\ \text{for every }w\in\mathcal S\right\}.
-\tag{C6}
 ```
 
 The elementary weak-duality calculation is already useful. For any feasible masses and polynomial,
@@ -101,10 +95,9 @@ a_{w_j}=\prod_{k\ne j}\frac{-w_k}{w_j-w_k},
 Consequently,
 
 ```math
-B_t(\mathcal S)=
+\text{(C7)}\qquad B_t(\mathcal S)=
 \min_{\substack{\{w_0,\ldots,w_t\}\subset\mathcal S}}
 \sum_{j=0}^t\prod_{k\ne j}\frac{w_k}{|w_j-w_k|}.
-\tag{C7}
 ```
 
 This exact finite formula is convenient for small certificates. It is not a claim that enumerating all subsets is an efficient algorithm for arbitrarily large parameter sets.
@@ -114,24 +107,22 @@ This exact finite formula is convenient for small certificates. It is not a clai
 **Theorem C1.** Suppose $r=d+t$. Then every logical weight component is fixed:
 
 ```math
-\boxed{
+\text{(C8)}\qquad \boxed{
 A_{d+j}=\alpha_j A,\qquad
 \alpha_j=(-1)^j
 \frac{(d)_{t+1}}{(d+j)j!(t-j)!},
 \quad 0\le j\le t,
 }
-\tag{C8}
 ```
 
 where $(d)_{t+1}=d(d+1)\cdots(d+t)$. Therefore
 
 ```math
-\boxed{
+\text{(C9)}\qquad \boxed{
 J\ge B_t(d,d+t)\,\omega,
 \qquad
 B_t(d,d+t)=\sum_{k=0}^t2^k\binom{d+k-1}{k}.
 }
-\tag{C9}
 ```
 
 **Proof of the operator identities.** For any polynomial $f$ of degree at most $t$, (C2) implies $\sum_w f(w)A_w=f(0)A$. Taking $f$ to be the Lagrange polynomial equal to one at $d+j$ and zero at the other $t$ allowed weights gives (C8). This step holds for matrices of every logical dimension.
@@ -167,10 +158,9 @@ Only the first row is accompanied here by a saturating physical construction. Th
 The growth is exponential:
 
 ```math
-B_t(2t+1,3t+1)
+\text{(C10)}\qquad B_t(2t+1,3t+1)
 \sim\frac65\sqrt{\frac{3}{4\pi t}}
 \left(\frac{27}{2}\right)^t.
-\tag{C10}
 ```
 
 To derive this, write the sum in (C9) as $\sum_{k=0}^t T_k$ with $T_k=2^k\binom{2t+k}{k}$. Its largest term is $T_t=2^t\binom{3t}{t}$. The backward ratio is $T_{k-1}/T_k=k/[2(2t+k)]\le1/6$, and each fixed number of steps from the top approaches ratio $1/6$. Dominated summation gives $\sum_kT_k/T_t\to\sum_{j\ge0}6^{-j}=6/5$. Stirling's formula for $\binom{3t}{t}$ gives (C10).
@@ -186,8 +176,7 @@ Write $B_t(d,r)=B_t(\{d,\ldots,r\})$.
 For $t=1$ and $r>d$, the exact moment optimum is
 
 ```math
-\boxed{B_1(d,r)=\frac{r+d}{r-d}.}
-\tag{C11}
+\text{(C11)}\qquad \boxed{B_1(d,r)=\frac{r+d}{r-d}.}
 ```
 
 A matching primal witness uses only the endpoints,
@@ -208,10 +197,9 @@ Equality at $r=4$ requires $A_3=4A$ and $A_4=-3A$. Equality at $r=5$ requires $A
 For $t=2$ and $r-d\ge2$, the exact discrete optimum is
 
 ```math
-\boxed{
+\text{(C12)}\qquad \boxed{
 B_2(d,r)=1+\frac{2dr}{\lfloor(r-d)^2/4\rfloor}.
 }
-\tag{C12}
 ```
 
 Let $m$ be either integer nearest $(d+r)/2$ and set $F=(m-d)(r-m)=\lfloor(r-d)^2/4\rfloor$. The three-node primal masses are
@@ -239,10 +227,9 @@ For example, $d=5$ gives moment costs $71,41,47/2,53/3$ at $r=7,8,9,10$. These a
 For arbitrary $t$, a readily evaluated dual witness is the Chebyshev polynomial
 
 ```math
-p(x)=T_t\!\left(\frac{r+d-2x}{r-d}\right),
+\text{(C13)}\qquad p(x)=T_t\!\left(\frac{r+d-2x}{r-d}\right),
 \qquad
 B_t(d,r)\ge T_t\!\left(\frac{r+d}{r-d}\right).
-\tag{C13}
 ```
 
 It is bounded by one on the whole real interval. The exact discrete bound can be stronger because only integer Pauli weights constrain the polynomial. Formula (C7) or an exact primal/dual pair retains that discrete information.
@@ -263,8 +250,7 @@ and logical representatives $L_X=XXXXX$, $L_Y=YYYYY$, and $L_Z=ZZZZZ$. Let $\mat
 For any one of these logical axes, the canonical Hamiltonian is
 
 ```math
-H_L^{\rm can}=\sum_{E\in\mathcal E}ELPE.
-\tag{C14}
+\text{(C14)}\qquad H_L^{\rm can}=\sum_{E\in\mathcal E}ELPE.
 ```
 
 Orthogonality of the error images immediately gives $H_L^{\rm can}EP=ELP$. Since the images fill the full Hilbert space, $(H_L^{\rm can})^2=I$ as well. Thus its logical half-splitting and its full operator norm are both one, even though its native Pauli coefficient budget is larger.
@@ -272,18 +258,16 @@ Orthogonality of the error images immediately gives $H_L^{\rm can}EP=ELP$. Since
 Expanding $P$ and using the single-error twirl gives the exactly normalized expression
 
 ```math
-H_L^{\rm can}
+\text{(C15)}\qquad H_L^{\rm can}
 =\sum_{S\in\mathcal G}\left(1-\frac{\mathrm{wt}(LS)}{4}\right)LS.
-\tag{C15}
 ```
 
 Each nontrivial logical Pauli coset contains ten weight-three and six weight-five representatives. The coefficients in these **signed coset coordinates** are therefore $+1/4$ and $-1/4$, respectively. Consequently,
 
 ```math
-(H_L^{\rm can})_3P=\frac52LP,\qquad
+\text{(C16)}\qquad (H_L^{\rm can})_3P=\frac52LP,\qquad
 (H_L^{\rm can})_5P=-\frac32LP,
 \qquad J=\frac{10+6}{4}=4.
-\tag{C16}
 ```
 
 At $d=3,r=5$, (C11) says $J\ge4\omega$. The known five-qubit Hamiltonian attains that lower bound. For the displayed choice $L=L_Z$, all sixteen **bare Hermitian Pauli coefficients** are $-1/4$; the ten cubic bare words act as minus $L_Z$ on the code. The machine-readable certificate records both conventions explicitly, avoiding a sign ambiguity when reproducing the Hamiltonian.
@@ -317,9 +301,8 @@ Second, the dual polynomial gives a precise equality condition. Put $f_Q=\ell(V^
 If equality holds, every nonidentity Pauli with a nonzero coefficient must satisfy
 
 ```math
-|f_Q|=1,\qquad |p(\mathrm{wt}(Q))|=1,
+\text{(C17)}\qquad |f_Q|=1,\qquad |p(\mathrm{wt}(Q))|=1,
 \qquad h_Qf_Qp(\mathrm{wt}(Q))>0.
-\tag{C17}
 ```
 
 Terms with scalar or zero logical witness cannot consume any budget in a saturating Hamiltonian. For an encoded qubit with a stabilizer logical Pauli as the target, $|f_Q|=1$ means that $Q$ belongs to that logical Pauli's stabilizer coset. Its coefficient sign must match both its literal coset sign and the dual contact sign.
