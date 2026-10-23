@@ -67,12 +67,12 @@ The $Y$ conversion matters in a Hamiltonian calculation. If a word contains $m$ 
 For any physical operator $B$, its compression is $V^\dagger BV$, a matrix on the logical space. The detection condition becomes
 
 ```math
-V^\dagger QV=q_QI_K,\qquad \operatorname{wt}(Q)<d.
+V^\dagger QV=q_QI_K,\qquad \mathrm{wt}(Q)<d.
 ```
 
 The scalar can be nonzero. A low-weight stabilizer has scalar compression even though it acts nontrivially on the full physical Hilbert space. Setting every detectable compression to zero would incorrectly exclude degenerate codes.
 
-Preskill's Eq. (7.17) translates to $V^\dagger E_b^\dagger E_aV=C_{ba}I_K$. Products of two weight-at-most-$t$ Paulis have weight at most $2t$, which explains the project's sufficient distance condition $d\ge2t+1$. The protected errors form a linear span: correcting a Pauli basis also corrects coherent combinations and channels whose Kraus operators lie in that span. The Hamiltonian theorem must nevertheless assume transparency separately.
+Preskill's Eq. (7.17) translates to $V^\dagger E_b^\dagger E_aV=C_{ba}I_K$. Products of two Paulis of weight at most $t$ have weight at most $2t$, which explains the project's sufficient distance condition $d\ge2t+1$. The protected errors form a linear span: correcting a Pauli basis also corrects coherent combinations and channels whose Kraus operators lie in that span. The Hamiltonian theorem must nevertheless assume transparency separately.
 
 Compression also does not certify invariance. The equality $V^\dagger HV=h_L$ discards the component $(I-P)HV$. Code preservation requires that component to vanish. Likewise,
 
@@ -104,7 +104,7 @@ V|0\rangle=|000\rangle,\qquad V|1\rangle=|111\rangle
 
 and protect only $\{I,X_1,X_2,X_3\}$. The checks $Z_1Z_2$ and $Z_2Z_3$ distinguish its four error images:
 
-| Error | Image of $|0\rangle$ | Image of $|1\rangle$ | Check eigenvalues |
+| Error | Image of $\lvert0\rangle$ | Image of $\lvert1\rangle$ | Check eigenvalues |
 |---|---|---|---|
 | $I$ | $000$ | $111$ | $(+,+)$ |
 | $X_1$ | $100$ | $011$ | $(-,+)$ |
@@ -203,7 +203,7 @@ H=\sum_wH_w,\qquad
 \mathcal W^j(H)=\sum_w w^jH_w.
 ```
 
-Remove logical scalars with $[B]_0=B-\operatorname{tr}(B)I_K/K$, and define
+Remove logical scalars with $[B]_0=B-\mathrm{tr}(B)I_K/K$, and define
 
 ```math
 A_w=[V^\dagger H_wV]_0,\qquad
@@ -240,7 +240,7 @@ A_3+A_4=A,\qquad 3A_3+4A_4=0,
 
 and hence $A_3=4A$, $A_4=-3A$. The desired logical generator is a cancellation between larger contributions of opposite sign.
 
-The general [locality theorem](../science/locality.md#3-general-locality-theorem) uses a polynomial to express the same obstruction. If at most $t$ distinct positive weights can contribute, a degree-at-most-$t$ polynomial can vanish at all of them while having value one at zero. The moment equations would make its weighted logical sum equal to $A$, while its zeros make that sum vanish. This requires at least $t+1$ contributing weights at or above $d$, giving $r\ge d+t$. The theorem is independent of stabilizer structure and of the number of physical qubits.
+The general [locality theorem](../science/locality.md#3-general-locality-theorem) uses a polynomial to express the same obstruction. If at most $t$ distinct positive weights can contribute, a polynomial of degree at most $t$ can vanish at all of them while having value one at zero. The moment equations would make its weighted logical sum equal to $A$, while its zeros make that sum vanish. This requires at least $t+1$ contributing weights at or above $d$, giving $r\ge d+t$. The theorem is independent of stabilizer structure and of the number of physical qubits.
 
 ### Why cancellation costs strength
 
@@ -294,7 +294,7 @@ Finally, $J$ counts strengths in a declared physical Pauli basis. It is not the 
 
 ## 7. Incidence and controls with unknown fault time
 
-The nine-qubit construction turns the abstract moments into a sitewise cancellation. Every displayed $Z$-type term has the same action on the code:
+The nine-qubit construction turns the abstract moments into a sitewise cancellation. Every displayed $Z$ type term has the same action on the code:
 
 ```math
 Z_SV=VZ.
@@ -366,8 +366,8 @@ The diamond norm convention ranges from zero to two. The [full derivation and co
 For a classical distribution of fault branches, independent of the logical input, let $\chi=\mathbb E[e^{-2i\delta}]$. In the intended-gate frame the recovered channel preserves populations and sends $\rho_{01}\mapsto\chi\rho_{01}$. The [channel calculation](../science/control_robustness.md#3-unknown-time-mixtures-give-an-exact-logical-channel) gives
 
 ```math
-F_e=\frac{1+\operatorname{Re}\chi}{2},\qquad
-1-F_{\rm avg}=\frac{1-\operatorname{Re}\chi}{3},\qquad
+F_e=\frac{1+\mathrm{Re}\,\chi}{2},\qquad
+1-F_{\rm avg}=\frac{1-\mathrm{Re}\,\chi}{3},\qquad
 \|\mathcal E_{\rm rel}-\mathrm{Id}\|_\diamond=|1-\chi|.
 ```
 
@@ -391,7 +391,7 @@ To translate the CSS description, let $H_Z$ and $H_X$ be its binary check matric
 
 ```math
 \mathcal C=\ker H_Z,\qquad
-\mathcal D=\operatorname{rowspan}H_X,\qquad
+\mathcal D=\mathrm{rowspan}\,H_X,\qquad
 \mathcal D\subseteq\mathcal C.
 ```
 

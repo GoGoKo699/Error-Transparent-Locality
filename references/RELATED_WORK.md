@@ -14,7 +14,7 @@ HV=Vh_L,\qquad HEV=EVh_L+\lambda_E EV .
 
 The logical generator $h_L$ is non-scalar. The real offset $\lambda_E$ may change a branch's overall phase but does not change its logical energy differences. The strict form has every $\lambda_E=0$; the explicit nine-qubit construction satisfies this strict form.
 
-Writing $H=\sum_Q c_Q Q$, the interaction order is $r=\max_{c_Q\ne0}\operatorname{wt}(Q)$, and the coefficient budget is $J(H)=\sum_{Q\ne I}|c_Q|$. The general result is $r\ge d+t$. For $d=3,t=1,r=4$, the coefficient bound is $J(H)\ge7\omega$, where $\omega$ is half the spectral width of $h_L$. A commuting Hamiltonian on a degenerate CSS $[[9,1,3]]$ code attains both bounds for one continuous logical axis.
+Writing $H=\sum_Q c_Q Q$, the interaction order is $r=\max_{c_Q\ne0}\mathrm{wt}(Q)$, and the coefficient budget is $J(H)=\sum_{Q\ne I}|c_Q|$. The general result is $r\ge d+t$. For $d=3,t=1,r=4$, the coefficient bound is $J(H)\ge7\omega$, where $\omega$ is half the spectral width of $h_L$. A commuting Hamiltonian on a degenerate CSS $[[9,1,3]]$ code attains both bounds for one continuous logical axis.
 
 Interaction order is distinct from the number of physical qubits touched by the whole Hamiltonian. A sum of four-body terms can have different supports whose union contains nine qubits. The coefficient budget also has a declared physical Pauli basis; it is not an operator norm, a gate count, a geometric range, or a cost for synthesizing many-body interactions from two-body controls.
 
@@ -22,7 +22,7 @@ Interaction order is distinct from the number of physical qubits touched by the 
 
 Exact correctability and the scalar-compression characterization of detectable errors are established quantum-error-correction theory. The relevant foundations are [Knill and Laflamme (1997)](https://doi.org/10.1103/PhysRevA.55.900) and the stabilizer formalism developed in [Gottesman (1997)](https://arxiv.org/abs/quant-ph/9705052). The locality theorem uses the detection property itself; it does not require a stabilizer code or nondegeneracy.
 
-The extension of a desired logical Hamiltonian to its correctable error sectors is established error-transparent-Hamiltonian machinery. Stabilizer dressing and cancellation between equivalent logical representatives also predate this project. For diagonal Hamiltonians, representing an energy function on bit strings by a sum of $Z$-type Pauli operators is the usual multilinear Fourier representation; [Hadfield (2021)](https://doi.org/10.1145/3478519) provides a systematic treatment. The degree of that function is its Pauli interaction order.
+The extension of a desired logical Hamiltonian to its correctable error sectors is established error-transparent-Hamiltonian machinery. Stabilizer dressing and cancellation between equivalent logical representatives also predate this project. For diagonal Hamiltonians, representing an energy function on bit strings by a sum of $Z$ type Pauli operators is the usual multilinear Fourier representation; [Hadfield (2021)](https://doi.org/10.1145/3478519) provides a systematic treatment. The degree of that function is its Pauli interaction order.
 
 The contribution considered here is therefore the code-independent interaction-order constraint, its quantitative coefficient consequences, and exact saturation by the supplied construction. The general sector-extension idea, Fourier representation, interpolation, and linear-programming duality are imported tools.
 

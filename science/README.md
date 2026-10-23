@@ -23,7 +23,7 @@ Let $d$ be the detection distance, $t$ the largest protected Pauli-error weight,
 
 | Statement | Status and evidence |
 |---|---|
-| $r\ge d+t$, hence $r\ge3t+1$ for correction of all weight-at-most-$t$ errors | General proof; arbitrary logical dimension, degenerate or nondegenerate code; consistent scalar sector shifts allowed |
+| $r\ge d+t$, hence $r\ge3t+1$ for correction of all errors of weight at most $t$ | General proof; arbitrary logical dimension, degenerate or nondegenerate code; consistent scalar sector shifts allowed |
 | At $r=d+t$, $J/\omega\ge\sum_{k=0}^t2^k\binom{d+k-1}{k}$ | General proof; physical saturation asserted only for a supplied construction |
 | For one protected error, $J/\omega\ge(r+d)/(r-d)$ | Exact optimum of the scalar moment relaxation; physically attained here at $(d,r)=(3,4)$ and by the known benchmark at $(3,5)$ |
 | Four-body, single-axis strict transparency on nine qubits with $J=7\omega$ | Explicit Hamiltonian, analytic proof, two independent exact certificates |
