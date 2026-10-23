@@ -313,7 +313,7 @@ For these nine coefficients, the minimum discrepancy among orders with one pulse
 (3579,1459,123,4678,589,167,1368,2569,346).
 ```
 
-Its prefix incidence entries all lie in $[-1,1]$. For the matching lower bound, every completed-pulse prefix is a half-integer vector, and the $3/2$ pulse on support $589$ changes three incidence entries by $3/2$. If $D<1$, every prefix entry would lie in $\{-1/2,0,1/2\}$, which cannot accommodate that change.
+Its prefix incidence entries all lie in $[-1,1]$. For the matching lower bound, every completed-pulse prefix is a half-integer vector, and the $3/2$ pulse on support $589$ changes three incidence entries by $3/2$. If $D\lt 1$, every prefix entry would lie in $\{-1/2,0,1/2\}$, which cannot accommodate that change.
 
 For this order, $B_{\max}=|\Theta|/N$, giving the conditional single-fault bounds
 
