@@ -1,0 +1,207 @@
+{
+  "n": 9,
+  "code": "CSS [[9,1,3]]; all stabilizers have +1 eigenvalue",
+  "X_stabilizer_supports": [
+    [
+      5,
+      9
+    ],
+    [
+      1,
+      2,
+      4,
+      6
+    ],
+    [
+      1,
+      3,
+      4,
+      7
+    ],
+    [
+      2,
+      3,
+      4,
+      5,
+      8
+    ]
+  ],
+  "Z_stabilizer_supports": [
+    [
+      1,
+      4,
+      8
+    ],
+    [
+      2,
+      6,
+      8
+    ],
+    [
+      3,
+      7,
+      8
+    ],
+    [
+      2,
+      3,
+      4,
+      5,
+      9
+    ]
+  ],
+  "stabilizer_generators": [
+    "IIIIXIIIX",
+    "XXIXIXIII",
+    "XIXXIIXII",
+    "IXXXXIIXI",
+    "ZIIZIIIZI",
+    "IZIIIZIZI",
+    "IIZIIIZZI",
+    "IZZZZIIIZ"
+  ],
+  "logical_X": "XIIXXIIII",
+  "logical_Z": "IIZZIZIII",
+  "distance": 3,
+  "C_words": [
+    "000000000",
+    "100110000",
+    "110101000",
+    "010011000",
+    "101100100",
+    "001010100",
+    "011001100",
+    "111111100",
+    "111000010",
+    "011110010",
+    "001101010",
+    "101011010",
+    "010100110",
+    "110010110",
+    "100001110",
+    "000111110",
+    "100100001",
+    "000010001",
+    "010001001",
+    "110111001",
+    "001000101",
+    "101110101",
+    "111101101",
+    "011011101",
+    "011100011",
+    "111010011",
+    "101001011",
+    "001111011",
+    "110000111",
+    "010110111",
+    "000101111",
+    "100011111"
+  ],
+  "D_words": [
+    "000000000",
+    "110101000",
+    "101100100",
+    "011001100",
+    "011110010",
+    "101011010",
+    "110010110",
+    "000111110",
+    "000010001",
+    "110111001",
+    "101110101",
+    "011011101",
+    "011100011",
+    "101001011",
+    "110000111",
+    "000101111"
+  ],
+  "index_convention": "Sites are one-based; the leftmost character is site 1. All stabilizer generators have eigenvalue +1.",
+  "hamiltonian_terms": [
+    {
+      "pauli": "IIZZIZIII",
+      "coefficient": "1",
+      "sites": [
+        3,
+        4,
+        6
+      ]
+    },
+    {
+      "pauli": "ZIIIIZZII",
+      "coefficient": "1",
+      "sites": [
+        1,
+        6,
+        7
+      ]
+    },
+    {
+      "pauli": "IIIIZIIZZ",
+      "coefficient": "3/2",
+      "sites": [
+        5,
+        8,
+        9
+      ]
+    },
+    {
+      "pauli": "ZZZIIIIII",
+      "coefficient": "1/2",
+      "sites": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "pauli": "IZIIZZIIZ",
+      "coefficient": "-1/2",
+      "sites": [
+        2,
+        5,
+        6,
+        9
+      ]
+    },
+    {
+      "pauli": "ZIZIIZIZI",
+      "coefficient": "-1",
+      "sites": [
+        1,
+        3,
+        6,
+        8
+      ]
+    },
+    {
+      "pauli": "IIIZIZZZI",
+      "coefficient": "-1/2",
+      "sites": [
+        4,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "pauli": "ZIIZZIIIZ",
+      "coefficient": "-1/2",
+      "sites": [
+        1,
+        4,
+        5,
+        9
+      ]
+    },
+    {
+      "pauli": "IIZIZIZIZ",
+      "coefficient": "-1/2",
+      "sites": [
+        3,
+        5,
+        7,
+        9
+      ]
+    }
+  ]
+}

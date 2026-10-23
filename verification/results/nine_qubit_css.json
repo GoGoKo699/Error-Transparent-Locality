@@ -1,0 +1,47 @@
+{
+  "exact_arithmetic": true,
+  "independent_X_checks": 4,
+  "independent_Z_checks": 4,
+  "encoded_qubits": 1,
+  "distance": 3,
+  "nonidentity_normalizers_of_weight_at_most_two": [
+    {
+      "sites": [
+        5,
+        9
+      ],
+      "labels": "XX"
+    }
+  ],
+  "all_terms_in_positive_logical_Z_coset": true,
+  "coefficient_sum": "1",
+  "sitewise_incident_coefficient_sums": [
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0",
+    "0"
+  ],
+  "positive_and_negative_incidence_masses": [
+    "3/2",
+    "1/2",
+    "3/2",
+    "1",
+    "3/2",
+    "2",
+    "1",
+    "3/2",
+    "3/2"
+  ],
+  "weight_three_coefficient_sum": "4",
+  "weight_four_coefficient_sum": "-3",
+  "pauli_coupling_l1": "7",
+  "classical_support_size": 32,
+  "classical_radius_one_plateau_checks": 320,
+  "full_operator_identity": "H E P = E Z_L P for E=I and every single-site Pauli",
+  "logical_axis_claimed": "Z only"
+}
