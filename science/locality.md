@@ -7,16 +7,14 @@ The assumptions and resource definitions are in the [model](model.md). The centr
 Write $H=\sum_w H_w$. For a logical operator $B$, define its scalar-free part by $[B]_0=B-\mathrm{tr}(B)I_K/K$. Let
 
 ```math
-A_w=[V^\dagger H_wV]_0,
+\text{(L1)}\qquad A_w=[V^\dagger H_wV]_0,
 \qquad A=[h_L]_0=\sum_w A_w.
-\tag{L1}
 ```
 
 Nontrivial logical evolution means $A\ne0$. Detection distance gives
 
 ```math
-A_w=0\qquad(w\lt d).
-\tag{L2}
+\text{(L2)}\qquad A_w=0\qquad(w\lt d).
 ```
 
 The terms $H_w$ need not preserve the code separately. Only their compressed scalar-free parts appear in the argument; the complete Hamiltonian obeys the full transparency condition.
@@ -26,17 +24,15 @@ The terms $H_w$ need not preserve the code separately. Only their compressed sca
 For each physical qubit define the complete Pauli twirl on observables,
 
 ```math
-\mathcal R_i(B)=\frac14\left(B+X_iBX_i+Y_iBY_i+Z_iBZ_i\right),
+\text{(L3)}\qquad \mathcal R_i(B)=\frac14\left(B+X_iBX_i+Y_iBY_i+Z_iBZ_i\right),
 \qquad
 \mathcal W=\sum_{i=1}^n(\mathrm{Id}-\mathcal R_i).
-\tag{L3}
 ```
 
 If a tensor Pauli has identity at site $i$, $\mathcal R_i$ leaves it unchanged; otherwise the twirl sends it to zero. Thus every Pauli of weight $w$ is an eigenoperator of $\mathcal W$ with eigenvalue $w$, and
 
 ```math
-\mathcal W^j(H)=\sum_w w^j H_w.
-\tag{L4}
+\text{(L4)}\qquad \mathcal W^j(H)=\sum_w w^j H_w.
 ```
 
 Each factor in $\mathcal W$ is a linear combination of the identity map and one-site Pauli conjugations. Expanding $\mathcal W^j$ gives a real linear combination of maps $B\mapsto E^\dagger BE$ with $\mathrm{wt}(E)\le j$. Repeated sites can reduce that weight. Pauli product phases cancel in conjugation. The expansion coefficients sum to zero for $j\ge1$, because every conjugation fixes $I$ whereas $\mathcal W^j(I)=0$.
@@ -50,8 +46,7 @@ V^\dagger E^\dagger HEV=h_L+\lambda_E I_K.
 Consequently the scalar-free compression of $\mathcal W^j(H)$ vanishes for $1\le j\le t$. This proves the moment identities
 
 ```math
-\boxed{\sum_w w^j A_w=0,\qquad j=1,\ldots,t.}
-\tag{L5}
+\text{(L5)}\qquad \boxed{\sum_w w^j A_w=0,\qquad j=1,\ldots,t.}
 ```
 
 This is an algebraic use of a depolarizing twirl, not an instruction to apply noise to the computer. Equivalently, the scalar-free compression of $e^{-s\mathcal W}(H)$ has its first $t$ derivatives at $s=0$ equal to zero. Different interaction weights decay at different rates under this mathematical map; exact transparency requires their logical responses to cancel.
@@ -61,8 +56,7 @@ This is an algebraic use of a depolarizing twirl, not an instruction to apply no
 **Theorem L1.** Let a fixed code of detection distance $d$ carry a Hermitian, code-preserving Hamiltonian that is transparent to every Pauli of weight at most $t$, allowing consistent scalar sector shifts as in (M2). If its logical action is nontrivial, its maximum interaction order satisfies
 
 ```math
-\boxed{r\ge d+t.}
-\tag{L6}
+\text{(L6)}\qquad \boxed{r\ge d+t.}
 ```
 
 **Proof.** If $r\lt d$, equation (L2) already makes $A=0$. Otherwise suppose $d\le r\lt d+t$ and form
@@ -88,8 +82,7 @@ For a time-dependent fixed-code protocol satisfying the transparency condition a
 When $t=1$, summing over the three nonidentity Paulis at every site gives the equivalent identity
 
 ```math
-\sum_{i=1}^n\sum_{a=X,Y,Z} a_i H_w a_i=(3n-4w)H_w.
-\tag{L7}
+\text{(L7)}\qquad \sum_{i=1}^n\sum_{a=X,Y,Z} a_i H_w a_i=(3n-4w)H_w.
 ```
 
 Transparency makes the scalar-free compression of the left-hand side equal to $3nA$. Therefore $\sum_w wA_w=0$. On a distance-three code, a Hamiltonian with only weights at most three would have $3A_3=0$ and hence no nontrivial logical action. At weight four the two equations are
@@ -101,8 +94,7 @@ A_3+A_4=A,\qquad 3A_3+4A_4=0,
 so necessarily
 
 ```math
-A_3=4A,\qquad A_4=-3A.
-\tag{L8}
+\text{(L8)}\qquad A_3=4A,\qquad A_4=-3A.
 ```
 
 The four-body construction achieves precisely this cancellation. The opposite signs are also the source of its unavoidable coupling cost.

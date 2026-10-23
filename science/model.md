@@ -23,9 +23,8 @@ The explicit examples encode one qubit. The general statements allow an arbitrar
 Take a Hermitian physical Hamiltonian $H$ preserving the code, and define its logical action $h_L=V^\dagger HV$, so $HV=Vh_L$. The strict transparency condition is
 
 ```math
-HEV=EVh_L
+\text{(M1)}\qquad HEV=EVh_L
 \quad\text{for every tensor Pauli }E\text{ with }\mathrm{wt}(E)\le t.
-\tag{M1}
 ```
 
 This is an equality of maps into the full physical Hilbert space. Matching only the compressed matrices does not establish it: an omitted component could leak out of an error sector. The construction and finite verifiers check the full equality.
@@ -33,8 +32,7 @@ This is an equality of maps into the full physical Hilbert space. Matching only 
 The lower bounds also allow consistent real scalar shifts,
 
 ```math
-HEV=EVh_L+\lambda_E EV,\qquad \lambda_I=0.
-\tag{M2}
+\text{(M2)}\qquad HEV=EVh_L+\lambda_E EV,\qquad \lambda_I=0.
 ```
 
 Such shifts change the phase of an error sector but leave its logical energy differences unchanged. Degeneracy or overlap between error images can restrict the permitted shifts; their consistency is an assumption, not an independent control freedom. Equation (M1) holds with every shift zero for the constructions used here.
@@ -46,9 +44,8 @@ These conditions are pointwise conditions on the generator. A gate that is corre
 Set $\hbar=1$. For a constant strictly transparent Hamiltonian and a fault $E$ at any time $0\le\tau\le T$, exponentiation of (M1) gives
 
 ```math
-e^{-iH(T-\tau)}E e^{-iH\tau}V
+\text{(M3)}\qquad e^{-iH(T-\tau)}E e^{-iH\tau}V
 =EVe^{-ih_LT}.
-\tag{M3}
 ```
 
 The accumulated logical unitary is independent of $\tau$. A final ideal recovery removes $E$. The same reasoning applies to a common pulse envelope $H(t)=g(t)H_\star$, replacing the duration by its integrated envelope. More generally, (M1) can be imposed at every instant for a fixed code and a time-dependent logical Hamiltonian; the corresponding time-ordered propagators satisfy the same intertwining relation.

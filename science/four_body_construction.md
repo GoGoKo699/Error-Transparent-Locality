@@ -18,8 +18,7 @@ Take the simultaneous $+1$ eigenspace of the following eight generators:
 The four $X$ checks and four $Z$ checks are separately independent, and their binary support row spaces are orthogonal. The generators therefore commute and leave a two-dimensional code. Logical representatives are
 
 ```math
-\overline X=X_{145},\qquad \overline Z=Z_{346}.
-\tag{F1}
+\text{(F1)}\qquad \overline X=X_{145},\qquad \overline Z=Z_{346}.
 ```
 
 They commute with every generator and anticommute with each other.
@@ -49,12 +48,11 @@ The code is degenerate: $X_5$ and $X_9$ have the same encoded action up to their
 Define
 
 ```math
-\begin{aligned}
+\text{(F2)}\qquad \begin{aligned}
 H_\star={}&Z_{346}+Z_{167}+\frac32Z_{589}+\frac12Z_{123}\\
 &-\frac12Z_{2569}-Z_{1368}-\frac12Z_{4678}
 -\frac12Z_{1459}-\frac12Z_{3579}.
 \end{aligned}
-\tag{F2}
 ```
 
 All nine terms commute globally. Each term is a positive representative of the same logical $Z$:
@@ -78,8 +76,7 @@ This table proves $Z_SP=\overline ZP$ for every displayed support. The coefficie
 The essential second identity is
 
 ```math
-\sum_{S\ni i}c_S=0\qquad\text{for every site }i=1,\ldots,9.
-\tag{F3}
+\text{(F3)}\qquad \sum_{S\ni i}c_S=0\qquad\text{for every site }i=1,\ldots,9.
 ```
 
 The positive and absolute negative coefficient masses incident on the sites are equal component by component. Their common vector is
@@ -99,9 +96,8 @@ X_iH_\star X_iP
 Multiplication by $X_i$ gives $H_\star X_iP=X_i\overline ZP$. The same signs arise for $Y_i$, while every $Z_i$ commutes with $H_\star$. Thus
 
 ```math
-\boxed{H_\star EP=E\overline ZP}
+\text{(F4)}\qquad \boxed{H_\star EP=E\overline ZP}
 \quad(E=I,X_i,Y_i,Z_i).
-\tag{F4}
 ```
 
 The derivation establishes a full physical-space equality. It includes preservation of the relevant error images, rather than only their projected logical energies.
