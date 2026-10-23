@@ -14,7 +14,7 @@ The absolute strengths required to produce $4h_L$ and $-3h_L$ cannot cancel in a
 
 Allowing order five changes the endpoint masses to $5/2$ and $-3/2$, reducing the required budget to four. The [canonical five-qubit protected Hamiltonian](coupling_cost.md#the-five-qubit-benchmark), already present in earlier work, attains this second optimum. The comparison demonstrates a real tradeoff between maximum native interaction order and the sum of native strengths. The data-qubit counts and term counts are separate resources: the exhibited four-body construction uses nine qubits and nine terms; the benchmark uses five qubits and sixteen terms for one axis.
 
-For a fixed-axis implementation with an instantaneous budget $J(t)\le J_{\max}$ and required exponent angle $\Theta$, the one-error bound implies
+For a fixed logical-qubit axis, write $h_L(t)=\Omega(t)Z+c(t)I$, so that $\omega(t)=\lvert\Omega(t)\rvert$ and the accumulated exponent angle is $\Theta=\int_0^T\Omega(t)dt$. With an instantaneous budget $J(t)\le J_{\max}$, the one-error bound implies
 
 ```math
 |\Theta|\le\int_0^T\omega(t)dt
@@ -27,7 +27,7 @@ provided the generator remains exactly transparent throughout and the logical ev
 T\ge\frac{r+d}{r-d}\frac{|\Theta|}{J_{\max}}.
 ```
 
-Here $\Theta$ is a chosen accumulated angle for the path, not a unique label for the final channel modulo its phase periodicity. A monotone common envelope attains the integrated-strength relation for the supplied saturating examples. This comparison does not assign a hardware cost to making a four- or five-body interaction available in the first place.
+Here $\Theta$ is a chosen accumulated angle for the path, not a unique label for the final channel modulo its phase periodicity. A sign-definite common envelope (equivalently, a monotone accumulated angle) attains the integrated-strength relation for the supplied saturating examples. Attaining the duration bound also requires using the available budget throughout the pulse. This comparison does not assign a hardware cost to making a four- or five-body interaction available in the first place.
 
 At minimum interaction order for higher error weights, the moment cost grows rapidly. The [closed expression and its asymptotic](coupling_cost.md#growth-with-the-number-of-protected-faults) quantify the price of insisting on the smallest order. They do not prove that any high-error equality case is physically attainable.
 

@@ -4,10 +4,6 @@
 
 A physical fault during a logical gate can change the rate of the encoded evolution until recovery occurs. An error-transparent Hamiltonian avoids that timing distortion by implementing the same logical generator in the code and every protected error image. This repository proves a general interaction-order constraint, derives the associated native coupling cost, and gives an explicit four-body construction that attains both bounds for arbitrary single-qubit errors.
 
-## Purpose
-
-This repository serves as a record of the work and a guide for the author’s self-directed learning. For discussion or potential collaboration, please contact Ruge Lin at [gogoko699@gmail.com](mailto:gogoko699@gmail.com).
-
 ## Main result
 
 For a fixed code with detection distance $d$, a nontrivial logical Hamiltonian transparent to every tensor-Pauli error of weight at most $t$ must have maximum Pauli-term weight
@@ -54,6 +50,12 @@ Start with the [scientific overview](science/README.md). The complete account is
 
 The [related-work account](references/RELATED_WORK.md) states the closest antecedents and the precise comparison. The [bibliography](references/references.bib) supplies primary-source metadata. The protected-Hamiltonian framework and canonical five-qubit construction are prior work; the weight-moment obstruction, its coefficient consequences, and the supplied saturating witness are the results developed here.
 
+## Learn the project
+
+The [learning guide](learning/README.md) connects the research to one educational anchor: **John Preskill, _Quantum Information_, Chapter 7, “Quantum Error Correction”**, in the author-hosted draft updated March 2026. The [Preskill bridge](learning/PRESKILL_BRIDGE.md) identifies the relevant sections, translates notation and Pauli phase conventions, and develops the extra steps needed for this project.
+
+The [30-milestone map](learning/MILESTONES.md) has two phases: **13 background milestones** establish the code, error, evolution, and resource language; **17 research milestones** build the moment obstruction, sharp single-error constructions, and control analysis. Each phase proceeds from local ingredients to a synthesis. The map follows the project's dependencies rather than the chapter's full table of contents.
+
 ## Reproduce the finite certificates
 
 Only Python 3.10 or later and its standard library are required:
@@ -71,6 +73,10 @@ Interaction order means the largest support of an individual Pauli term. It is d
 The terms must maintain the transparency conditions throughout the gate. Commuting terms applied sequentially can have the correct fault-free final unitary while an intermediate fault creates a logical error. The control account derives this effect and a bounded sequential approximation.
 
 The results assume a fixed code and ideal final recovery. State preparation, recovery-device faults, ancilla overhead, and synthesis of many-body interactions from different primitives require their own resource and noise accounting.
+
+## Purpose and contact
+
+This repository serves as a record of the work and a guide for the author’s self-directed learning. For discussion or potential collaboration, please contact Ruge Lin at [gogoko699@gmail.com](mailto:gogoko699@gmail.com).
 
 ## License
 
