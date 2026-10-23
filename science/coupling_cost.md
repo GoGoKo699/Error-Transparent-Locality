@@ -19,7 +19,7 @@ J=\sum_{Q\ne I}|h_Q|,
 Let $A_w=[V^\dagger H_wV]_0$ and $A=[h_L]_0$. The established identities are
 
 ```math
-A_w=0\ (w<d),\qquad
+A_w=0\ (w\lt d),\qquad
 \sum_w A_w=A,\qquad
 \sum_w w^jA_w=0\ (1\le j\le t).
 \tag{C2}
@@ -91,7 +91,7 @@ Thus a polynomial and a signed mass distribution with equal values are an exact 
 
 When $|\mathcal S|\ge t+1$, an optimal basic solution has exactly $t+1$ nonzero masses. To see this, split each mass into positive and negative variables. A basic solution has at most $t+1$ nonzero variables, and both signs at the same weight can be canceled to reduce cost. Fewer than $t+1$ support weights are impossible by the preceding annihilating-polynomial argument.
 
-For ordered nodes $w_0<\cdots<w_t$ in $\mathcal S$, the unique moment solution is evaluation at zero of the Lagrange basis:
+For ordered nodes $w_0\lt \cdots\lt w_t$ in $\mathcal S$, the unique moment solution is evaluation at zero of the Lagrange basis:
 
 ```math
 a_{w_j}=\prod_{k\ne j}\frac{-w_k}{w_j-w_k},

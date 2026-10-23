@@ -15,7 +15,7 @@ A_w=[V^\dagger H_wV]_0,
 Nontrivial logical evolution means $A\ne0$. Detection distance gives
 
 ```math
-A_w=0\qquad(w<d).
+A_w=0\qquad(w\lt d).
 \tag{L2}
 ```
 
@@ -65,7 +65,7 @@ This is an algebraic use of a depolarizing twirl, not an instruction to apply no
 \tag{L6}
 ```
 
-**Proof.** If $r<d$, equation (L2) already makes $A=0$. Otherwise suppose $d\le r<d+t$ and form
+**Proof.** If $r\lt d$, equation (L2) already makes $A=0$. Otherwise suppose $d\le r\lt d+t$ and form
 
 ```math
 q(x)=\prod_{a=d}^{r}\left(1-\frac{x}{a}\right).

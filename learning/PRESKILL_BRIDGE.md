@@ -67,7 +67,7 @@ The $Y$ conversion matters in a Hamiltonian calculation. If a word contains $m$ 
 For any physical operator $B$, its compression is $V^\dagger BV$, a matrix on the logical space. The detection condition becomes
 
 ```math
-V^\dagger QV=q_QI_K,\qquad \mathrm{wt}(Q)<d.
+V^\dagger QV=q_QI_K,\qquad \mathrm{wt}(Q)\lt d.
 ```
 
 The scalar can be nonzero. A low-weight stabilizer has scalar compression even though it acts nontrivially on the full physical Hilbert space. Setting every detectable compression to zero would incorrectly exclude degenerate codes.
