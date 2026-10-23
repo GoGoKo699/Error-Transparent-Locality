@@ -1,0 +1,509 @@
+{
+  "exact_arithmetic": true,
+  "moment_constraints": "sum_w a_w w^j = delta_{j0}, j=0,...,t",
+  "dual": "maximize p(0), degree(p)<=t, |p(w)|<=1 for every allowed weight",
+  "records": [
+    {
+      "d": 3,
+      "r": 4,
+      "feasible": true,
+      "allowed_weights": [
+        3,
+        4
+      ],
+      "t": 1,
+      "optimal_cost": "7",
+      "primal_support": [
+        3,
+        4
+      ],
+      "primal_masses": [
+        "4",
+        "-3"
+      ],
+      "dual_polynomial_coefficients_ascending": [
+        "7",
+        "-2"
+      ],
+      "dual_values_on_allowed_weights": [
+        "1",
+        "-1"
+      ],
+      "interpretation": "Exact moment-relaxation optimum; no physical-code attainability is asserted."
+    },
+    {
+      "d": 3,
+      "r": 5,
+      "feasible": true,
+      "allowed_weights": [
+        3,
+        4,
+        5
+      ],
+      "t": 1,
+      "optimal_cost": "4",
+      "primal_support": [
+        3,
+        5
+      ],
+      "primal_masses": [
+        "5/2",
+        "-3/2"
+      ],
+      "dual_polynomial_coefficients_ascending": [
+        "4",
+        "-1"
+      ],
+      "dual_values_on_allowed_weights": [
+        "1",
+        "0",
+        "-1"
+      ],
+      "interpretation": "Exact moment-relaxation optimum; no physical-code attainability is asserted."
+    },
+    {
+      "d": 3,
+      "r": 6,
+      "feasible": true,
+      "allowed_weights": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "t": 1,
+      "optimal_cost": "3",
+      "primal_support": [
+        3,
+        6
+      ],
+      "primal_masses": [
+        "2",
+        "-1"
+      ],
+      "dual_polynomial_coefficients_ascending": [
+        "3",
+        "-2/3"
+      ],
+      "dual_values_on_allowed_weights": [
+        "1",
+        "1/3",
+        "-1/3",
+        "-1"
+      ],
+      "interpretation": "Exact moment-relaxation optimum; no physical-code attainability is asserted."
+    },
+    {
+      "d": 3,
+      "r": 7,
+      "feasible": true,
+      "allowed_weights": [
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "t": 1,
+      "optimal_cost": "5/2",
+      "primal_support": [
+        3,
+        7
+      ],
+      "primal_masses": [
+        "7/4",
+        "-3/4"
+      ],
+      "dual_polynomial_coefficients_ascending": [
+        "5/2",
+        "-1/2"
+      ],
+      "dual_values_on_allowed_weights": [
+        "1",
+        "1/2",
+        "0",
+        "-1/2",
+        "-1"
+      ],
+      "interpretation": "Exact moment-relaxation optimum; no physical-code attainability is asserted."
+    },
+    {
+      "d": 5,
+      "r": 7,
+      "feasible": true,
+      "allowed_weights": [
+        5,
+        6,
+        7
+      ],
+      "t": 2,
+      "optimal_cost": "71",
+      "primal_support": [
+        5,
+        6,
+        7
+      ],
+      "primal_masses": [
+        "21",
+        "-35",
+        "15"
+      ],
+      "dual_polynomial_coefficients_ascending": [
+        "71",
+        "-24",
+        "2"
+      ],
+      "dual_values_on_allowed_weights": [
+        "1",
+        "-1",
+        "1"
+      ],
+      "interpretation": "Exact moment-relaxation optimum; no physical-code attainability is asserted."
+    },
+    {
+      "d": 5,
+      "r": 8,
+      "feasible": true,
+      "allowed_weights": [
+        5,
+        6,
+        7,
+        8
+      ],
+      "t": 2,
+      "optimal_cost": "41",
+      "primal_support": [
+        5,
+        6,
+        8
+      ],
+      "primal_masses": [
+        "16",
+        "-20",
+        "5"
+      ],
+      "dual_polynomial_coefficients_ascending": [
+        "41",
+        "-13",
+        "1"
+      ],
+      "dual_values_on_allowed_weights": [
+        "1",
+        "-1",
+        "-1",
+        "1"
+      ],
+      "interpretation": "Exact moment-relaxation optimum; no physical-code attainability is asserted."
+    },
+    {
+      "d": 5,
+      "r": 9,
+      "feasible": true,
+      "allowed_weights": [
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "t": 2,
+      "optimal_cost": "47/2",
+      "primal_support": [
+        5,
+        7,
+        9
+      ],
+      "primal_masses": [
+        "63/8",
+        "-45/4",
+        "35/8"
+      ],
+      "dual_polynomial_coefficients_ascending": [
+        "47/2",
+        "-7",
+        "1/2"
+      ],
+      "dual_values_on_allowed_weights": [
+        "1",
+        "-1/2",
+        "-1",
+        "-1/2",
+        "1"
+      ],
+      "interpretation": "Exact moment-relaxation optimum; no physical-code attainability is asserted."
+    },
+    {
+      "d": 5,
+      "r": 10,
+      "feasible": true,
+      "allowed_weights": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "t": 2,
+      "optimal_cost": "53/3",
+      "primal_support": [
+        5,
+        7,
+        10
+      ],
+      "primal_masses": [
+        "7",
+        "-25/3",
+        "7/3"
+      ],
+      "dual_polynomial_coefficients_ascending": [
+        "53/3",
+        "-5",
+        "1/3"
+      ],
+      "dual_values_on_allowed_weights": [
+        "1",
+        "-1/3",
+        "-1",
+        "-1",
+        "-1/3",
+        "1"
+      ],
+      "interpretation": "Exact moment-relaxation optimum; no physical-code attainability is asserted."
+    },
+    {
+      "d": 7,
+      "r": 10,
+      "feasible": true,
+      "allowed_weights": [
+        7,
+        8,
+        9,
+        10
+      ],
+      "t": 3,
+      "optimal_cost": "799",
+      "primal_support": [
+        7,
+        8,
+        9,
+        10
+      ],
+      "primal_masses": [
+        "120",
+        "-315",
+        "280",
+        "-84"
+      ],
+      "dual_polynomial_coefficients_ascending": [
+        "799",
+        "-860/3",
+        "34",
+        "-4/3"
+      ],
+      "dual_values_on_allowed_weights": [
+        "1",
+        "-1",
+        "1",
+        "-1"
+      ],
+      "interpretation": "Exact moment-relaxation optimum; no physical-code attainability is asserted."
+    },
+    {
+      "d": 7,
+      "r": 11,
+      "feasible": true,
+      "allowed_weights": [
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "t": 3,
+      "optimal_cost": "351",
+      "primal_support": [
+        7,
+        8,
+        10,
+        11
+      ],
+      "primal_masses": [
+        "220/3",
+        "-385/3",
+        "308/3",
+        "-140/3"
+      ],
+      "dual_polynomial_coefficients_ascending": [
+        "351",
+        "-120",
+        "27/2",
+        "-1/2"
+      ],
+      "dual_values_on_allowed_weights": [
+        "1",
+        "-1",
+        "0",
+        "1",
+        "-1"
+      ],
+      "interpretation": "Exact moment-relaxation optimum; no physical-code attainability is asserted."
+    },
+    {
+      "d": 7,
+      "r": 12,
+      "feasible": true,
+      "allowed_weights": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "t": 3,
+      "optimal_cost": "1083/5",
+      "primal_support": [
+        7,
+        8,
+        11,
+        12
+      ],
+      "primal_masses": [
+        "264/5",
+        "-77",
+        "56",
+        "-154/5"
+      ],
+      "dual_polynomial_coefficients_ascending": [
+        "1083/5",
+        "-1064/15",
+        "38/5",
+        "-4/15"
+      ],
+      "dual_values_on_allowed_weights": [
+        "1",
+        "-1",
+        "-3/5",
+        "3/5",
+        "1",
+        "-1"
+      ],
+      "interpretation": "Exact moment-relaxation optimum; no physical-code attainability is asserted."
+    },
+    {
+      "d": 9,
+      "r": 13,
+      "feasible": true,
+      "allowed_weights": [
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "t": 4,
+      "optimal_cost": "9439",
+      "primal_support": [
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "primal_masses": [
+        "715",
+        "-2574",
+        "3510",
+        "-2145",
+        "495"
+      ],
+      "dual_polynomial_coefficients_ascending": [
+        "9439",
+        "-10472/3",
+        "1444/3",
+        "-88/3",
+        "2/3"
+      ],
+      "dual_values_on_allowed_weights": [
+        "1",
+        "-1",
+        "1",
+        "-1",
+        "1"
+      ],
+      "interpretation": "Exact moment-relaxation optimum; no physical-code attainability is asserted."
+    },
+    {
+      "label": "five-qubit odd-weight coset at r=4",
+      "feasible": false,
+      "allowed_weights": [
+        3
+      ],
+      "t": 1,
+      "annihilator_coefficients": [
+        "-3",
+        "1"
+      ]
+    },
+    {
+      "label": "five-qubit logical coset at r=5",
+      "feasible": true,
+      "allowed_weights": [
+        3,
+        5
+      ],
+      "t": 1,
+      "optimal_cost": "4",
+      "primal_support": [
+        3,
+        5
+      ],
+      "primal_masses": [
+        "5/2",
+        "-3/2"
+      ],
+      "dual_polynomial_coefficients_ascending": [
+        "4",
+        "-1"
+      ],
+      "dual_values_on_allowed_weights": [
+        "1",
+        "-1"
+      ],
+      "interpretation": "Exact moment-relaxation optimum; no physical-code attainability is asserted."
+    },
+    {
+      "label": "illustrative sparse allowed set, not a code claim",
+      "feasible": true,
+      "allowed_weights": [
+        5,
+        7,
+        9
+      ],
+      "t": 2,
+      "optimal_cost": "47/2",
+      "primal_support": [
+        5,
+        7,
+        9
+      ],
+      "primal_masses": [
+        "63/8",
+        "-45/4",
+        "35/8"
+      ],
+      "dual_polynomial_coefficients_ascending": [
+        "47/2",
+        "-7",
+        "1/2"
+      ],
+      "dual_values_on_allowed_weights": [
+        "1",
+        "-1",
+        "1"
+      ],
+      "interpretation": "Exact moment-relaxation optimum; no physical-code attainability is asserted."
+    }
+  ]
+}

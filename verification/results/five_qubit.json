@@ -1,0 +1,396 @@
+{
+  "exact_arithmetic": true,
+  "n": 5,
+  "k": 1,
+  "distance": 3,
+  "code_nondegenerate": true,
+  "stabilizer_generators": [
+    "IXZZX",
+    "XIXZZ",
+    "ZXIXZ",
+    "ZZXIX"
+  ],
+  "syndrome_projectors_sum_to_identity": true,
+  "construction": "H_L = sum_{E in {I,X_i,Y_i,Z_i}} E L P E",
+  "provenance": "Canonical protected Hamiltonian, known prior construction; coupling-budget optimality is the new derived comparison.",
+  "axes": {
+    "X": {
+      "logical_pauli": "XXXXX",
+      "terms": [
+        {
+          "pauli": "IIZXZ",
+          "coset_sign": "-1",
+          "weight": 3,
+          "signed_coset_coefficient": "1/4",
+          "bare_coefficient": "-1/4"
+        },
+        {
+          "pauli": "IXIYY",
+          "coset_sign": "-1",
+          "weight": 3,
+          "signed_coset_coefficient": "1/4",
+          "bare_coefficient": "-1/4"
+        },
+        {
+          "pauli": "IYYIX",
+          "coset_sign": "-1",
+          "weight": 3,
+          "signed_coset_coefficient": "1/4",
+          "bare_coefficient": "-1/4"
+        },
+        {
+          "pauli": "IZXZI",
+          "coset_sign": "-1",
+          "weight": 3,
+          "signed_coset_coefficient": "1/4",
+          "bare_coefficient": "-1/4"
+        },
+        {
+          "pauli": "XIYYI",
+          "coset_sign": "-1",
+          "weight": 3,
+          "signed_coset_coefficient": "1/4",
+          "bare_coefficient": "-1/4"
+        },
+        {
+          "pauli": "XZIIZ",
+          "coset_sign": "-1",
+          "weight": 3,
+          "signed_coset_coefficient": "1/4",
+          "bare_coefficient": "-1/4"
+        },
+        {
+          "pauli": "YIXIY",
+          "coset_sign": "-1",
+          "weight": 3,
+          "signed_coset_coefficient": "1/4",
+          "bare_coefficient": "-1/4"
+        },
+        {
+          "pauli": "YYIXI",
+          "coset_sign": "-1",
+          "weight": 3,
+          "signed_coset_coefficient": "1/4",
+          "bare_coefficient": "-1/4"
+        },
+        {
+          "pauli": "ZIIZX",
+          "coset_sign": "-1",
+          "weight": 3,
+          "signed_coset_coefficient": "1/4",
+          "bare_coefficient": "-1/4"
+        },
+        {
+          "pauli": "ZXZII",
+          "coset_sign": "-1",
+          "weight": 3,
+          "signed_coset_coefficient": "1/4",
+          "bare_coefficient": "-1/4"
+        },
+        {
+          "pauli": "XXXXX",
+          "coset_sign": "1",
+          "weight": 5,
+          "signed_coset_coefficient": "-1/4",
+          "bare_coefficient": "-1/4"
+        },
+        {
+          "pauli": "XYZZY",
+          "coset_sign": "1",
+          "weight": 5,
+          "signed_coset_coefficient": "-1/4",
+          "bare_coefficient": "-1/4"
+        },
+        {
+          "pauli": "YXYZZ",
+          "coset_sign": "1",
+          "weight": 5,
+          "signed_coset_coefficient": "-1/4",
+          "bare_coefficient": "-1/4"
+        },
+        {
+          "pauli": "YZZYX",
+          "coset_sign": "1",
+          "weight": 5,
+          "signed_coset_coefficient": "-1/4",
+          "bare_coefficient": "-1/4"
+        },
+        {
+          "pauli": "ZYXYZ",
+          "coset_sign": "1",
+          "weight": 5,
+          "signed_coset_coefficient": "-1/4",
+          "bare_coefficient": "-1/4"
+        },
+        {
+          "pauli": "ZZYXY",
+          "coset_sign": "1",
+          "weight": 5,
+          "signed_coset_coefficient": "-1/4",
+          "bare_coefficient": "-1/4"
+        }
+      ],
+      "weight_three_terms": 10,
+      "weight_five_terms": 6,
+      "weight_three_logical_coefficient": "5/2",
+      "weight_five_logical_coefficient": "-3/2",
+      "maximum_locality": 5,
+      "pauli_l1": "4",
+      "full_error_transparency_identities": 16,
+      "global_square_is_identity": true,
+      "terms_pairwise_commute": true
+    },
+    "Y": {
+      "logical_pauli": "YYYYY",
+      "terms": [
+        {
+          "pauli": "IIXYX",
+          "coset_sign": "-1",
+          "weight": 3,
+          "signed_coset_coefficient": "1/4",
+          "bare_coefficient": "-1/4"
+        },
+        {
+          "pauli": "IXYXI",
+          "coset_sign": "-1",
+          "weight": 3,
+          "signed_coset_coefficient": "1/4",
+          "bare_coefficient": "-1/4"
+        },
+        {
+          "pauli": "IYIZZ",
+          "coset_sign": "-1",
+          "weight": 3,
+          "signed_coset_coefficient": "1/4",
+          "bare_coefficient": "-1/4"
+        },
+        {
+          "pauli": "IZZIY",
+          "coset_sign": "-1",
+          "weight": 3,
+          "signed_coset_coefficient": "1/4",
+          "bare_coefficient": "-1/4"
+        },
+        {
+          "pauli": "XIIXY",
+          "coset_sign": "-1",
+          "weight": 3,
+          "signed_coset_coefficient": "1/4",
+          "bare_coefficient": "-1/4"
+        },
+        {
+          "pauli": "XYXII",
+          "coset_sign": "-1",
+          "weight": 3,
+          "signed_coset_coefficient": "1/4",
+          "bare_coefficient": "-1/4"
+        },
+        {
+          "pauli": "YIZZI",
+          "coset_sign": "-1",
+          "weight": 3,
+          "signed_coset_coefficient": "1/4",
+          "bare_coefficient": "-1/4"
+        },
+        {
+          "pauli": "YXIIX",
+          "coset_sign": "-1",
+          "weight": 3,
+          "signed_coset_coefficient": "1/4",
+          "bare_coefficient": "-1/4"
+        },
+        {
+          "pauli": "ZIYIZ",
+          "coset_sign": "-1",
+          "weight": 3,
+          "signed_coset_coefficient": "1/4",
+          "bare_coefficient": "-1/4"
+        },
+        {
+          "pauli": "ZZIYI",
+          "coset_sign": "-1",
+          "weight": 3,
+          "signed_coset_coefficient": "1/4",
+          "bare_coefficient": "-1/4"
+        },
+        {
+          "pauli": "XXZYZ",
+          "coset_sign": "1",
+          "weight": 5,
+          "signed_coset_coefficient": "-1/4",
+          "bare_coefficient": "-1/4"
+        },
+        {
+          "pauli": "XZYZX",
+          "coset_sign": "1",
+          "weight": 5,
+          "signed_coset_coefficient": "-1/4",
+          "bare_coefficient": "-1/4"
+        },
+        {
+          "pauli": "YYYYY",
+          "coset_sign": "1",
+          "weight": 5,
+          "signed_coset_coefficient": "-1/4",
+          "bare_coefficient": "-1/4"
+        },
+        {
+          "pauli": "YZXXZ",
+          "coset_sign": "1",
+          "weight": 5,
+          "signed_coset_coefficient": "-1/4",
+          "bare_coefficient": "-1/4"
+        },
+        {
+          "pauli": "ZXXZY",
+          "coset_sign": "1",
+          "weight": 5,
+          "signed_coset_coefficient": "-1/4",
+          "bare_coefficient": "-1/4"
+        },
+        {
+          "pauli": "ZYZXX",
+          "coset_sign": "1",
+          "weight": 5,
+          "signed_coset_coefficient": "-1/4",
+          "bare_coefficient": "-1/4"
+        }
+      ],
+      "weight_three_terms": 10,
+      "weight_five_terms": 6,
+      "weight_three_logical_coefficient": "5/2",
+      "weight_five_logical_coefficient": "-3/2",
+      "maximum_locality": 5,
+      "pauli_l1": "4",
+      "full_error_transparency_identities": 16,
+      "global_square_is_identity": true,
+      "terms_pairwise_commute": true
+    },
+    "Z": {
+      "logical_pauli": "ZZZZZ",
+      "terms": [
+        {
+          "pauli": "IIYZY",
+          "coset_sign": "-1",
+          "weight": 3,
+          "signed_coset_coefficient": "1/4",
+          "bare_coefficient": "-1/4"
+        },
+        {
+          "pauli": "IXXIZ",
+          "coset_sign": "-1",
+          "weight": 3,
+          "signed_coset_coefficient": "1/4",
+          "bare_coefficient": "-1/4"
+        },
+        {
+          "pauli": "IYZYI",
+          "coset_sign": "-1",
+          "weight": 3,
+          "signed_coset_coefficient": "1/4",
+          "bare_coefficient": "-1/4"
+        },
+        {
+          "pauli": "IZIXX",
+          "coset_sign": "-1",
+          "weight": 3,
+          "signed_coset_coefficient": "1/4",
+          "bare_coefficient": "-1/4"
+        },
+        {
+          "pauli": "XIZIX",
+          "coset_sign": "-1",
+          "weight": 3,
+          "signed_coset_coefficient": "1/4",
+          "bare_coefficient": "-1/4"
+        },
+        {
+          "pauli": "XXIZI",
+          "coset_sign": "-1",
+          "weight": 3,
+          "signed_coset_coefficient": "1/4",
+          "bare_coefficient": "-1/4"
+        },
+        {
+          "pauli": "YIIYZ",
+          "coset_sign": "-1",
+          "weight": 3,
+          "signed_coset_coefficient": "1/4",
+          "bare_coefficient": "-1/4"
+        },
+        {
+          "pauli": "YZYII",
+          "coset_sign": "-1",
+          "weight": 3,
+          "signed_coset_coefficient": "1/4",
+          "bare_coefficient": "-1/4"
+        },
+        {
+          "pauli": "ZIXXI",
+          "coset_sign": "-1",
+          "weight": 3,
+          "signed_coset_coefficient": "1/4",
+          "bare_coefficient": "-1/4"
+        },
+        {
+          "pauli": "ZYIIY",
+          "coset_sign": "-1",
+          "weight": 3,
+          "signed_coset_coefficient": "1/4",
+          "bare_coefficient": "-1/4"
+        },
+        {
+          "pauli": "XYYXZ",
+          "coset_sign": "1",
+          "weight": 5,
+          "signed_coset_coefficient": "-1/4",
+          "bare_coefficient": "-1/4"
+        },
+        {
+          "pauli": "XZXYY",
+          "coset_sign": "1",
+          "weight": 5,
+          "signed_coset_coefficient": "-1/4",
+          "bare_coefficient": "-1/4"
+        },
+        {
+          "pauli": "YXZXY",
+          "coset_sign": "1",
+          "weight": 5,
+          "signed_coset_coefficient": "-1/4",
+          "bare_coefficient": "-1/4"
+        },
+        {
+          "pauli": "YYXZX",
+          "coset_sign": "1",
+          "weight": 5,
+          "signed_coset_coefficient": "-1/4",
+          "bare_coefficient": "-1/4"
+        },
+        {
+          "pauli": "ZXYYX",
+          "coset_sign": "1",
+          "weight": 5,
+          "signed_coset_coefficient": "-1/4",
+          "bare_coefficient": "-1/4"
+        },
+        {
+          "pauli": "ZZZZZ",
+          "coset_sign": "1",
+          "weight": 5,
+          "signed_coset_coefficient": "-1/4",
+          "bare_coefficient": "-1/4"
+        }
+      ],
+      "weight_three_terms": 10,
+      "weight_five_terms": 6,
+      "weight_three_logical_coefficient": "5/2",
+      "weight_five_logical_coefficient": "-3/2",
+      "maximum_locality": 5,
+      "pauli_l1": "4",
+      "full_error_transparency_identities": 16,
+      "global_square_is_identity": true,
+      "terms_pairwise_commute": true
+    }
+  }
+}

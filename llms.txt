@@ -1,0 +1,24 @@
+# Error-Transparent Locality
+
+> Exact interaction-order and native Pauli coupling bounds for continuous error-transparent logical Hamiltonians, with a certified four-body single-axis construction.
+
+## Authoritative scientific account
+
+- [Overview](science/README.md): supported results and their logical dependencies.
+- [Model](science/model.md): fixed-code assumptions, full error-sector identities, scalar shifts, and resource definitions.
+- [Locality](science/locality.md): general proof of r >= d + t using Pauli-weight moments.
+- [Coupling cost](science/coupling_cost.md): exact finite moment relaxation, minimum-locality cost, and the known five-qubit comparison.
+- [Four-body construction](science/four_body_construction.md): literal stabilizers, logical operators, nine Hamiltonian terms, and full transparency proof.
+- [Control robustness](science/control_robustness.md): coefficient errors, fault-time phases, classical channel mixtures, and pulse schedules.
+- [Interpretation](science/interpretation.md): physical meaning and boundaries of the comparison.
+
+## Evidence and prior work
+
+- [Verification](verification/README.md): standard-library exact checks; run python verification/run_all.py.
+- [Construction data](verification/data/nine_qubit.json): one-based sites, positive stabilizer generators, bare Hermitian Pauli coefficients.
+- [Related work](references/RELATED_WORK.md): primary-source comparisons, inherited methods, and priority-assessment limits.
+- [Bibliography](references/references.bib): versioned primary-source metadata.
+
+## Claim boundaries
+
+The four-body construction proves one logical axis on a nine-qubit distance-three code. It does not prove universal four-body control, minimal qubit count, or a complete hardware advantage. Higher-error moment costs are necessary bounds without asserted physical saturation. Native coupling sums do not include recovery or gadget synthesis. The canonical five-qubit protected construction is prior work. The general theorem does not cover arbitrary moving-code, circuit, or dissipative schemes.
