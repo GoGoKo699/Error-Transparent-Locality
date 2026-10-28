@@ -10,7 +10,7 @@ From the repository root, using Python 3.10 or later:
 python verification/run_all.py
 ```
 
-The command runs seven scientific checks and compares their JSON output with the committed records. It reads files without modifying them. Assertions are part of the checks; do not disable them with `-O` or `PYTHONOPTIMIZE`.
+The command runs eight scientific checks and compares their JSON output with the committed records. It reads files without modifying them. Assertions are part of the checks; do not disable them with `-O` or `PYTHONOPTIMIZE`.
 
 An individual script prints its full certificate, for example:
 
@@ -29,12 +29,15 @@ python verification/five_qubit.py
 | [control.py](control.py) | Incidence rank eight and its one-dimensional kernel, 19,008 exact phase-exponent identities, the sequencing counterexample, and an optimal pulse-order certificate over all 512 subsets | [control.json](results/control.json) |
 | [verify_gate_readout_tradeoff.py](verify_gate_readout_tradeoff.py) | Complete stabilizer/centralizer enumeration for the nine-qubit, five-qubit, and fixed-ancilla codes; exact support-collision distances, a four-site logical-$Z$ circuit, all fourteen proper subwords, rational transparency identities, and the $p_4$ polynomial | [verify_gate_readout_tradeoff.json](results/verify_gate_readout_tradeoff.json) |
 | [verify_readout_safe_family.py](verify_readout_safe_family.py) | All three axes of the five- and twenty-five-qubit equality construction; signed stabilizer elimination, exact local-axis counts and full single-error identities; recursive resources through depth four; a two-error counterexample | [verify_readout_safe_family.json](results/verify_readout_safe_family.json) |
+| [verify_sparse_gates.py](verify_sparse_gates.py) | Closed 75-term twenty-five-qubit gates on all three axes; exact recursive sparse gates through depth three; independent signed membership, shift symmetries, coefficient bounds and full error-image identities | [verify_sparse_gates.json](results/verify_sparse_gates.json) |
 
 The two nine-qubit verifiers use different representations. The full projector check multiplies signed Pauli polynomials. The CSS check reconstructs the binary spaces and diagonal energies directly from the printed support lists. Agreement checks both the physical operator statement and the simpler cancellation mechanism.
 
 The [joint gate/readout theorem](../science/gate_readout_tradeoff.md) is supported by a standalone comparison script also included in the companion repository. Direct enumeration gives 2,848 support-collision pairs and $r_S=4$ for the nine-qubit code. The five-qubit code and its fixed-ancilla extension have zero collisions and $r_S=\infty$. The latter has a weight-four logical with a proper stabilizer subword, checking why arbitrary even logical weight is insufficient. The script verifies the complementary syndrome pairing and the polynomial $p_4(q)=3q^2-2q^3$ algebraically; the optimal-recovery interpretation follows from the written even-circuit theorem, not a numerical optimization.
 
 The [concatenated equality family](../science/minimum_readout_safe_gates.md) has a separate exact certificate. At depth two, it expands all 28,000 terms for each of three axes, verifies every term's signed logical-coset membership using phase-aware binary elimination, and checks all 76 identity/single-Pauli intertwiners per axis. The two classes have 10,000 weight-nine and 18,000 weight-eleven terms, with single-error responses $13/25$ and $31/75$. The combination with masses $11/2$ and $-9/2$ has logical rate one and $J=10$. Direct enumeration for $X_1X_2$ on the logical-$Z$ Hamiltonian instead gives rate $1/5$, verifying the single-error scope. Recursive integer/rational checks extend through depth four; the arbitrary-depth distance, reversibility, and gate claims are proved in the scientific account.
+
+The [sparse construction](../science/sparse_protected_gates.md) has an exact standard-library generator, [sparse_pauli.py](sparse_pauli.py), and a separate verifier. The generator couples finite seed distributions, reduces three- and four-dimensional integer count vectors with rational arithmetic, then expands cyclic translation orbits. It avoids the dense Pauli list and numerical optimization. The verifier checks the closed 75-term form from [sparse_25_qubit.json](data/sparse_25_qubit.json) for every axis, with bare coefficients $2/25$, $7/50$, and $9/50$. It also checks the general recursion through depths one, two, and three, independently verifies coordinate-shift automorphisms of the signed code, and certifies every no-error/single-Pauli intertwiner and the rational denominator bounds. Term count, coefficient complexity, and physical interaction synthesis remain separate resources.
 
 ## Data and conventions
 

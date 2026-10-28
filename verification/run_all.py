@@ -19,6 +19,7 @@ CHECKS = (
     ("control", "19,008 phase identities, incidence kernel, optimal pulse order"),
     ("verify_gate_readout_tradeoff", "gate/readout comparison, support collisions, fixed-ancilla counterexample"),
     ("verify_readout_safe_family", "concatenated equality family, signed shells, and full single-error identities"),
+    ("verify_sparse_gates", "sparse recursive gates, exact coefficients, signs, and full single-error identities"),
 )
 
 

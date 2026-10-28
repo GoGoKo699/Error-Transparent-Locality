@@ -16,6 +16,7 @@ This account establishes a general constraint, realizes its first nontrivial equ
 | [Physical interpretation](interpretation.md) | Why the cancellations cost strength, what the comparison establishes, and the boundaries of the resource claims |
 | [Gate locality and syndrome readout](gate_readout_tradeoff.md) | At odd distance, minimum interaction order forces $r_S=d+1$; fixed-qubit proof and exact code comparison |
 | [Equality family with reversible readout](minimum_readout_safe_gates.md) | Concatenated five-qubit codes attain $\ell=d+2$, $J/\omega=d+1$, and $r_S=\infty$ for each logical Pauli axis and one protected error |
+| [Sparse exact protected gates](sparse_protected_gates.md) | At most $3n+1$ terms exist per axis; explicit recursion uses at most $4n$ with small rational coefficients; 75-term example at $n=25$ |
 
 The [related-work account](../references/RELATED_WORK.md) gives the nearest precedents and their hypotheses. The [verification guide](../verification/README.md) provides reproducible exact certificates.
 
@@ -32,6 +33,7 @@ Let $d$ be the detection distance, $t$ the largest protected Pauli-error weight,
 | Five-body canonical benchmark on five qubits with $J=4\omega$ | Prior construction, exact reconstruction, and coupling-bound optimality under the stated budget |
 | For odd-distance stabilizer codes, $r=d+t$ implies $r_S=d+1$ | Joint proof from weight moments and the companion project's even-circuit theorem; nine-qubit witness checked exactly |
 | On $[[5^m,1,3^m]]$ codes, all three axes attain $\ell=d+2$ and $J/\omega=d+1$ while $r_S=\infty$ | Explicit two-shell Hamiltonians and recursive proof for one protected error; exact signed checks at $m=1,2$ |
+| The same resource equalities admit sparse native Pauli expansions | Exact support-reduction proof and constructive orbit recursion; finite exact signs and error identities checked independently |
 | A fault at site $i$ and time $\tau$ produces recovered angle $A-2B_i(\tau)$ in the nine-support control family | Full propagator derivation; exact phase checks and explicit sequencing failure |
 
 The higher-error entries $71,799,9439$ in the minimum-locality budget are necessary bounds. They are not claimed as realized gates. The explicit four-body gate is one continuous logical axis; universal control and minimal physical block size remain outside the established result.

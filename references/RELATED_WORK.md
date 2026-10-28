@@ -86,6 +86,10 @@ A final-time code-preserving gate can rely on phase identities modulo $2\pi$. A 
 
 The [concatenated equality construction](../science/minimum_readout_safe_gates.md) uses the inherited five-qubit code and canonical protected Hamiltonian as its base. It combines recursively chosen signed Pauli classes with the existing weight-moment and syndrome-reversibility theorems. Its derived statement is that $[[5^m,1,3^m]]$ codes admit strictly single-error-transparent gates on each logical Pauli axis with optimal interaction order $d+2$ and native budget $(d+1)\omega$, while retaining $r_S=\infty$. The code family and the general idea of stabilizer dressing are not attributed to this construction. The statement is established here by its explicit proof and exact certificates; this does not constitute an exhaustive literature-priority claim.
 
+## Sparse descriptions and exact support reduction
+
+The [sparse gate account](../science/sparse_protected_gates.md) uses the standard fact that a feasible nonnegative linear system admits independent support no larger than its rank; see, for example, the [linear-programming background notes by Hank Yang](https://hankyang.seas.harvard.edu/Semidefinite/background.html). The proof is included directly. This principle supplies the $3n+1$ native-term bound. The code-specific construction then uses coordinatewise cyclic automorphisms, low-dimensional count vectors, and exact coupling of finite distributions to generate at most $4n$ terms with $O(\log n)$-bit rational coefficients. Those are derived statements about this protected-gate family, with no claim that the general support-reduction principle is new. A closed 75-term twenty-five-qubit witness and the arbitrary-depth algorithm have separate exact certificates.
+
 ## Source versions and remaining bibliographic boundary
 
 The links above identify published records where available. The following versioned preprints were used for the detailed comparison:
