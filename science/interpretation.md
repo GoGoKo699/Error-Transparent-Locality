@@ -39,6 +39,10 @@ Consequently, a perturbation can preserve every no-fault logical-angle test whil
 
 Sequential application of the commuting terms illustrates this distinction sharply. Its fault-free final unitary is exactly correct, but a fault between pulses can create a full logical error. Repeated cycles can bound this conditional phase error, at the cost of more pulses. Without pulse durations, switching costs, and a physical noise model, that approximation does not establish a better total error rate.
 
+## A constraint from syndrome readout
+
+Minimum interaction order also constrains the same code's behavior under prescribed syndrome measurement. For odd $d$, the [joint gate/readout theorem](gate_readout_tradeoff.md) proves that exact transparency at $r=d+t$ forces syndrome reversibility distance $r_S=d+1$. The nine-qubit construction has $r_S=4$, with a four-site rotation exposing its logical $Z$; the five-qubit benchmark has $r_S=\infty$ and uses five-body interactions. Fixed ancillary qubits do not evade the proof. This is a structural comparison across two experiments: it does not combine unknown-time gate faults with the known-product-unitary readout model.
+
 ## Boundaries of the comparison
 
 The theorem concerns a fixed subspace code and a generator satisfying specified sector-intertwining identities. Its locality is tensor-Pauli weight. It does not impose geometric locality or constrain arbitrary circuits, moving encodings, measurement-assisted gates, or generalized autonomous schemes whose correction dynamics mixes syndrome sectors.

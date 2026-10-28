@@ -17,6 +17,7 @@ CHECKS = (
     ("five_qubit", "three canonical axes, 48 error identities, complete syndromes"),
     ("moment_bounds", "15 exact finite moment certificates"),
     ("control", "19,008 phase identities, incidence kernel, optimal pulse order"),
+    ("verify_gate_readout_tradeoff", "gate/readout comparison, support collisions, fixed-ancilla counterexample"),
 )
 
 
