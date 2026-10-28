@@ -43,6 +43,8 @@ Sequential application of the commuting terms illustrates this distinction sharp
 
 Minimum interaction order also constrains the same code's behavior under prescribed syndrome measurement. For odd $d$, the [joint gate/readout theorem](gate_readout_tradeoff.md) proves that exact transparency at $r=d+t$ forces syndrome reversibility distance $r_S=d+1$. The nine-qubit construction has $r_S=4$, with a four-site rotation exposing its logical $Z$; the five-qubit benchmark has $r_S=\infty$ and uses five-body interactions. Fixed ancillary qubits do not evade the proof. This is a structural comparison across two experiments: it does not combine unknown-time gate faults with the known-product-unitary readout model.
 
+The [concatenated construction](minimum_readout_safe_gates.md) shows that the one-error bound $\ell\ge d+2$ at $r_S=\infty$ is attained for unbounded $d=3^m$. The same Hamiltonians attain the coupling lower bound $J/\omega=d+1$ for each of three logical axes. The gain in interaction order has a large term-count cost: the 25-qubit example contains 28,000 Pauli terms, and the count grows exponentially with distance. The single-fault gate guarantee does not automatically increase with the code's correction capacity.
+
 ## Boundaries of the comparison
 
 The theorem concerns a fixed subspace code and a generator satisfying specified sector-intertwining identities. Its locality is tensor-Pauli weight. It does not impose geometric locality or constrain arbitrary circuits, moving encodings, measurement-assisted gates, or generalized autonomous schemes whose correction dynamics mixes syndrome sectors.
