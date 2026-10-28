@@ -82,6 +82,10 @@ A final-time code-preserving gate can rely on phase identities modulo $2\pi$. A 
 
 [Bradshaw (2026)](https://arxiv.org/abs/2610.05189) studies error-transparent switching between permutation-invariant codes along continuous families. That work concerns a changing code and leaves physical control synthesis as an additional problem. The fixed-code locality theorem here does not provide a lower bound for an arbitrary moving-code protocol.
 
+## Growing-distance gates with reversible syndrome readout
+
+The [concatenated equality construction](../science/minimum_readout_safe_gates.md) uses the inherited five-qubit code and canonical protected Hamiltonian as its base. It combines recursively chosen signed Pauli classes with the existing weight-moment and syndrome-reversibility theorems. Its derived statement is that $[[5^m,1,3^m]]$ codes admit strictly single-error-transparent gates on each logical Pauli axis with optimal interaction order $d+2$ and native budget $(d+1)\omega$, while retaining $r_S=\infty$. The code family and the general idea of stabilizer dressing are not attributed to this construction. The statement is established here by its explicit proof and exact certificates; this does not constitute an exhaustive literature-priority claim.
+
 ## Source versions and remaining bibliographic boundary
 
 The links above identify published records where available. The following versioned preprints were used for the detailed comparison:

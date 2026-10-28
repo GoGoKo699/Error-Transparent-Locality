@@ -41,6 +41,8 @@ The two examples establish exact optima at their respective interaction orders u
 
 For an odd-distance stabilizer code, attaining the protected-gate interaction order $r=d+t$ forces syndrome reversibility distance $r_S=d+1$. Thus $r_S>d+1$, including perfect product-unitary reversibility, requires at least $d+t+1$-body interactions under the same transparency assumptions. The [joint theorem and proof](science/gate_readout_tradeoff.md) connect this project to [Syndrome Reversibility Distance](https://github.com/GoGoKo699/Syndrome-Reversibility-Distance), handle fixed ancillary qubits, and give an exact four-site readout-loss witness on the nine-qubit code. Higher-error attainability and composition of the two noise models remain separate questions.
 
+The [growing-distance construction](science/minimum_readout_safe_gates.md) attains the stronger bound for one protected error: on $[[5^m,1,3^m]]$ concatenated five-qubit codes, all three logical Pauli axes have strict transparency with interaction order $\ell=d+2$, coupling budget $J/\omega=d+1$, and $r_S=\infty$. Both resource bounds are optimal in the declared model. The $[[25,1,9]]$ instance uses eleven-body terms and $J/\omega=10$. The number of Pauli terms grows exponentially with $d$; the gate guarantee protects one physical fault even when the code can correct more.
+
 ## Read the work
 
 Start with the [scientific overview](science/README.md). The complete account is organized by topic:
@@ -68,7 +70,7 @@ Only Python 3.10 or later and its standard library are required:
 python verification/run_all.py
 ```
 
-The [verification guide](verification/README.md) explains the six exact checks and links their committed JSON records. They cover full physical-space error identities, stabilizer signs, code distance, coupling normalization, finite primal/dual certificates, and control-phase formulas. No floating-point tolerance is used.
+The [verification guide](verification/README.md) explains the seven exact checks and links their committed JSON records. They cover full physical-space error identities, stabilizer signs, code distance, coupling normalization, finite primal/dual certificates, and control-phase formulas. No floating-point tolerance is used.
 
 ## Physical scope
 
