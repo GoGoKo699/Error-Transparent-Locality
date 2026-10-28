@@ -90,6 +90,10 @@ The [concatenated equality construction](../science/minimum_readout_safe_gates.m
 
 The [sparse gate account](../science/sparse_protected_gates.md) uses the standard fact that a feasible nonnegative linear system admits independent support no larger than its rank; see, for example, the [linear-programming background notes by Hank Yang](https://hankyang.seas.harvard.edu/Semidefinite/background.html). The proof is included directly. This principle supplies the $3n+1$ native-term bound. The code-specific construction then uses coordinatewise cyclic automorphisms, low-dimensional count vectors, and exact coupling of finite distributions to generate at most $4n$ terms with $O(\log n)$-bit rational coefficients. Those are derived statements about this protected-gate family, with no claim that the general support-reduction principle is new. A closed 75-term twenty-five-qubit witness and the arbitrary-depth algorithm have separate exact certificates.
 
+## Two-error transparency and block-resolved moments
+
+The [twenty-five-qubit two-error account](../science/two_error_gates.md) reuses the concatenated five-qubit code and signed stabilizer-dressing framework. Its explicit four-class construction attains interaction order thirteen and coupling budget $521\omega/8$ for every Pauli error of weight at most two. The additional resource obstruction resolves squared Pauli weights inside inner blocks, separating two weight-thirteen classes that the scalar total-weight relaxation merges. This code-specific result is proved and exactly certified here; the code, Pauli twirls, and generic syndrome-sector extension are inherited ingredients. No exhaustive literature-priority claim is made.
+
 ## Source versions and remaining bibliographic boundary
 
 The links above identify published records where available. The following versioned preprints were used for the detailed comparison:

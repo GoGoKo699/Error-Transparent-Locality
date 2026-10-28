@@ -43,6 +43,8 @@ For an odd-distance stabilizer code, attaining the protected-gate interaction or
 
 The [growing-distance construction](science/minimum_readout_safe_gates.md) attains the stronger bound for one protected error: on $[[5^m,1,3^m]]$ concatenated five-qubit codes, all three logical Pauli axes have strict transparency with interaction order $\ell=d+2$, coupling budget $J/\omega=d+1$, and $r_S=\infty$. Both resource bounds are optimal in the declared model. The $[[25,1,9]]$ instance uses eleven-body terms and $J/\omega=10$. The [sparse construction](science/sparse_protected_gates.md) replaces the exponential expansion by at most $4n$ terms per axis using an explicit exact recursion, with a separate existence bound of $3n+1$. The 25-qubit example has 75 terms and only three bare coefficient values. The gate guarantee protects one physical fault even when the code can correct more.
 
+The [two-error construction](science/two_error_gates.md) reaches interaction order thirteen on the $[[25,1,9]]$ code while retaining $r_S=\infty$. A block-resolved moment certificate proves the sharper code-specific coupling bound $J/\omega\ge521/8$, and four explicit term classes attain it for each logical Pauli axis. Thus both interaction order and the native coupling budget at that order are optimal for this code and protected error set.
+
 ## Read the work
 
 Start with the [scientific overview](science/README.md). The complete account is organized by topic:
@@ -70,7 +72,7 @@ Only Python 3.10 or later and its standard library are required:
 python verification/run_all.py
 ```
 
-The [verification guide](verification/README.md) explains the eight exact checks and links their committed JSON records. They cover full physical-space error identities, stabilizer signs, code distance, coupling normalization, finite primal/dual certificates, and control-phase formulas. No floating-point tolerance is used.
+The [verification guide](verification/README.md) explains the nine exact checks and links their committed JSON records. They cover full physical-space error identities, stabilizer signs, code distance, coupling normalization, finite primal/dual certificates, and control-phase formulas. No floating-point tolerance is used.
 
 ## Physical scope
 
