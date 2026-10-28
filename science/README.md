@@ -14,6 +14,7 @@ This account establishes a general constraint, realizes its first nontrivial equ
 | [Four-body construction](four_body_construction.md) | An explicit degenerate CSS $[[9,1,3]]$ code and nine commuting terms attaining $r=4$, $J=7\omega$ |
 | [Control robustness](control_robustness.md) | Exact fault-dependent phase, coefficient calibration, classical noise mixtures, and simultaneous versus sequential pulses |
 | [Physical interpretation](interpretation.md) | Why the cancellations cost strength, what the comparison establishes, and the boundaries of the resource claims |
+| [Gate locality and syndrome readout](gate_readout_tradeoff.md) | At odd distance, minimum interaction order forces $r_S=d+1$; fixed-qubit proof and exact code comparison |
 
 The [related-work account](../references/RELATED_WORK.md) gives the nearest precedents and their hypotheses. The [verification guide](../verification/README.md) provides reproducible exact certificates.
 
@@ -28,6 +29,7 @@ Let $d$ be the detection distance, $t$ the largest protected Pauli-error weight,
 | For one protected error, $J/\omega\ge(r+d)/(r-d)$ | Exact optimum of the scalar moment relaxation; physically attained here at $(d,r)=(3,4)$ and by the known benchmark at $(3,5)$ |
 | Four-body, single-axis strict transparency on nine qubits with $J=7\omega$ | Explicit Hamiltonian, analytic proof, two independent exact certificates |
 | Five-body canonical benchmark on five qubits with $J=4\omega$ | Prior construction, exact reconstruction, and coupling-bound optimality under the stated budget |
+| For odd-distance stabilizer codes, $r=d+t$ implies $r_S=d+1$ | Joint proof from weight moments and the companion project's even-circuit theorem; nine-qubit witness checked exactly |
 | A fault at site $i$ and time $\tau$ produces recovered angle $A-2B_i(\tau)$ in the nine-support control family | Full propagator derivation; exact phase checks and explicit sequencing failure |
 
 The higher-error entries $71,799,9439$ in the minimum-locality budget are necessary bounds. They are not claimed as realized gates. The explicit four-body gate is one continuous logical axis; universal control and minimal physical block size remain outside the established result.

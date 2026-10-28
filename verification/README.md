@@ -10,7 +10,7 @@ From the repository root, using Python 3.10 or later:
 python verification/run_all.py
 ```
 
-The command runs five scientific checks and compares their JSON output with the committed records. It reads files without modifying them. Assertions are part of the checks; do not disable them with `-O` or `PYTHONOPTIMIZE`.
+The command runs six scientific checks and compares their JSON output with the committed records. It reads files without modifying them. Assertions are part of the checks; do not disable them with `-O` or `PYTHONOPTIMIZE`.
 
 An individual script prints its full certificate, for example:
 
@@ -27,8 +27,11 @@ python verification/five_qubit.py
 | [five_qubit.py](five_qubit.py) | The established canonical construction for each of three logical axes, all 48 full error identities, orthogonal and complete syndrome projectors, exact Pauli coefficients, and $H_L^2=I$ | [five_qubit.json](results/five_qubit.json) |
 | [moment_bounds.py](moment_bounds.py) | Fifteen finite rational certificates: all moment constraints, all allowed-weight dual inequalities, matching primal and dual values, and one infeasibility witness | [moment_bounds.json](results/moment_bounds.json) |
 | [control.py](control.py) | Incidence rank eight and its one-dimensional kernel, 19,008 exact phase-exponent identities, the sequencing counterexample, and an optimal pulse-order certificate over all 512 subsets | [control.json](results/control.json) |
+| [verify_gate_readout_tradeoff.py](verify_gate_readout_tradeoff.py) | Complete stabilizer/centralizer enumeration for the nine-qubit, five-qubit, and fixed-ancilla codes; exact support-collision distances, a four-site logical-$Z$ circuit, all fourteen proper subwords, rational transparency identities, and the $p_4$ polynomial | [verify_gate_readout_tradeoff.json](results/verify_gate_readout_tradeoff.json) |
 
 The two nine-qubit verifiers use different representations. The full projector check multiplies signed Pauli polynomials. The CSS check reconstructs the binary spaces and diagonal energies directly from the printed support lists. Agreement checks both the physical operator statement and the simpler cancellation mechanism.
+
+The [joint gate/readout theorem](../science/gate_readout_tradeoff.md) is supported by a standalone comparison script also included in the companion repository. Direct enumeration gives 2,848 support-collision pairs and $r_S=4$ for the nine-qubit code. The five-qubit code and its fixed-ancilla extension have zero collisions and $r_S=\infty$. The latter has a weight-four logical with a proper stabilizer subword, checking why arbitrary even logical weight is insufficient. The script verifies the complementary syndrome pairing and the polynomial $p_4(q)=3q^2-2q^3$ algebraically; the optimal-recovery interpretation follows from the written even-circuit theorem, not a numerical optimization.
 
 ## Data and conventions
 
