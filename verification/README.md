@@ -10,7 +10,7 @@ From the repository root, using Python 3.10 or later:
 python verification/run_all.py
 ```
 
-The command runs ten scientific checks and compares their JSON output with the committed records. It reads files without modifying them. Assertions are part of the checks; do not disable them with `-O` or `PYTHONOPTIMIZE`.
+The command runs eleven scientific checks and compares their JSON output with the committed records. It reads files without modifying them. Assertions are part of the checks; do not disable them with `-O` or `PYTHONOPTIMIZE`.
 
 An individual script prints its full certificate, for example:
 
@@ -32,6 +32,7 @@ python verification/five_qubit.py
 | [verify_sparse_gates.py](verify_sparse_gates.py) | Closed 75-term twenty-five-qubit gates on all three axes; exact recursive sparse gates through depth three; independent signed membership, shift symmetries, coefficient bounds and full error-image identities | [verify_sparse_gates.json](results/verify_sparse_gates.json) |
 | [verify_two_error_gates.py](verify_two_error_gates.py) | Every Pauli error of weight at most two on all three axes; complete contributing block-pattern classification; exact primal/dual block-moment certificates; 2,575-term sparse optimal gates | [verify_two_error_gates.json](results/verify_two_error_gates.json) |
 | [verify_growing_two_error.py](verify_growing_two_error.py) | All-depth polynomial response identities; frontier-padding probability recursion; growing block-moment primal/dual certificates; independent 125-qubit support and error-label classification | [verify_growing_two_error.json](results/verify_growing_two_error.json) |
+| [verify_two_error_synthesis.py](verify_two_error_synthesis.py) | Positive 25-qubit class profiles; exact unequal pairwise coupling and recursive profiles; actual depth-two reference compilation; every signed term and all protected-error responses of the 69,125-term 125-qubit gate on all three axes | [Sparse synthesis certificate](results/verify_two_error_synthesis.json) |
 
 The two nine-qubit verifiers use different representations. The full projector check multiplies signed Pauli polynomials. The CSS check reconstructs the binary spaces and diagonal energies directly from the printed support lists. Agreement checks both the physical operator statement and the simpler cancellation mechanism.
 
@@ -44,6 +45,8 @@ The [sparse construction](../science/sparse_protected_gates.md) has an exact sta
 The [two-error account](../science/two_error_gates.md) has independent factorized and explicit sparse checks. The main program constructs the signed five-qubit group using literal Pauli multiplication, exhausts its 1,024 physical labels to classify every inner normalizer, and checks all 2,776 protected errors on each of three axes. Its four-class moment matrix has unique masses $143/8,-117/4,243/16,-45/16$; the exact dual row $(521/8,-12,1/2,1/8)$ proves the refined coupling certificate. The helper [two_error_sparse.py](two_error_sparse.py) independently expands [103 stored cyclic-orbit seeds](data/two_error_sparse_orbits.json) into 2,575 terms per axis, checks every signed full-code logical membership, and evaluates all protected error responses using integer contractions over a common denominator. The stored sparse coefficients have a 125-bit common denominator; no numerical optimizer is required to reproduce the certificate.
 
 The [growing two-error theorem](../science/growing_two_error_gates.md) is checked at three levels. Exact polynomial arithmetic verifies the response cancellations and coupling formula for arbitrary active-block count. Rational hierarchy calculations through depths two to six check every first-divergence category and the block-moment dual. Independent enumeration of all 10,000 depth-three support trees confirms active/padding correlations and detects the failure of uniform inactive-leaf padding. Finally, the script enumerates and classifies all 70,126 weight-at-most-two physical error labels on 125 qubits. This last check establishes category coverage; it is not a dense native-Pauli expansion or a large Hilbert-space matrix calculation. Full error-image transparency at all depths follows from the signed-coset construction and the written probability proof.
+
+The [sparse two-error synthesis](../science/sparse_two_error_synthesis.md) has a separate [exact verifier](verify_two_error_synthesis.py). It expands all 69,125 terms for each logical axis and checks their actual signed logical-coset memberships. Exact bitset correlations check 562 translation-orbit equations; independent coverage assigns all 70,126 protected physical errors to these orbits. Literal site-by-site character sums cross-check the bitset formula. The verifier also checks every positive 25-qubit class profile, rational pairwise marginal and tensor-response identities with unequal 127-bit denominators, the recursive class profiles through depth six, and an actual depth-two reference compilation. The explicit 125-qubit coefficients have a 1,458-bit common denominator. Reproducing the certificate requires no numerical optimizer.
 
 ## Data and conventions
 

@@ -49,6 +49,8 @@ The [two-error construction](two_error_gates.md) now attains interaction order t
 
 The [all-depth two-error family](growing_two_error_gates.md) shows that the same kind of optimum persists beyond twenty-five qubits. Its interaction order is $d+4$ and its coupling budget is $(4d^2+21d+8)\omega/8$. The new ingredient is the location of the stabilizer-padding term: selecting an inactive frontier subtree preserves the active/padding pair correlations of the concatenation tree. Uniform selection among all inactive bottom blocks fails at larger depths. The theorem supplies exact native resource equalities; the sparse term-count existence bound and any practical synthesis algorithm are separate questions.
 
+The [sparse two-error synthesis](sparse_two_error_synthesis.md) turns the growing-family result into an explicit 125-qubit certificate: 69,125 native terms per logical axis, interaction order 31, and optimal $J/\omega=3491/8$. Separate positive 25-qubit component certificates preserve full two-error profiles for recursion. Exact pairwise child coupling suffices because a protected error touches at most two child factors. The 1,458-bit common coefficient denominator and the reference compiler's high polynomial degree are description and synthesis costs beyond the native absolute coupling budget.
+
 ## Boundaries of the comparison
 
 The theorem concerns a fixed subspace code and a generator satisfying specified sector-intertwining identities. Its locality is tensor-Pauli weight. It does not impose geometric locality or constrain arbitrary circuits, moving encodings, measurement-assisted gates, or generalized autonomous schemes whose correction dynamics mixes syndrome sectors.
@@ -57,4 +59,4 @@ The native budget also excludes state preparation, syndrome extraction, final re
 
 The [literature comparison](../references/RELATED_WORK.md) distinguishes this setting from an earlier five-body discussion using a common active subsystem, syndrome-dependent logical-rate deformation, bosonic squeezing-order bounds, and energy-penalty protection. These are different hypotheses or resource definitions, and their results are not contradicted by a sum of four-body terms on a nine-qubit block.
 
-The established scientific conclusion is a general weight-moment obstruction with an exactly attained single-error case and an explicit strength tradeoff. Higher-error attainability, the smallest block supporting the four-body optimum, universal four-body logical control, and a complete hardware realization require additional results.
+The established scientific conclusion is a general weight-moment obstruction with an exactly attained single-error case and an explicit strength tradeoff. Attainability of the unrestricted minimum order $r=d+t$ for $t>1$, the smallest block supporting the four-body optimum, universal four-body logical control, and a complete hardware realization require additional results.

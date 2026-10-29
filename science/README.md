@@ -19,6 +19,7 @@ This account establishes a general constraint, realizes its first nontrivial equ
 | [Sparse exact protected gates](sparse_protected_gates.md) | At most $3n+1$ terms exist per axis; explicit recursion uses at most $4n$ with small rational coefficients; 75-term example at $n=25$ |
 | [Two-error protected gates](two_error_gates.md) | The twenty-five-qubit code attains $\ell=13$ and the refined native coupling optimum $J/\omega=521/8$ for all errors of weight at most two |
 | [Growing two-error family](growing_two_error_gates.md) | Every depth $m\ge2$ attains $\ell=d+4$ and $J/\omega=(4d^2+21d+8)/8$ with tree-correlated stabilizer padding |
+| [Exact sparse two-error synthesis](sparse_two_error_synthesis.md) | Positive class certificates, pairwise recursive compiler, and an exact 69,125-term optimum on 125 qubits |
 
 The [related-work account](../references/RELATED_WORK.md) gives the nearest precedents and their hypotheses. The [verification guide](../verification/README.md) provides reproducible exact certificates.
 
