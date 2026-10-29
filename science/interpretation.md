@@ -47,6 +47,8 @@ The [concatenated construction](minimum_readout_safe_gates.md) shows that the on
 
 The [two-error construction](two_error_gates.md) now attains interaction order thirteen on the twenty-five-qubit code. Its exact coupling budget $521\omega/8$ is optimal at that order and is stricter than the total-weight moment bound $119\omega/2$. Resolving the interaction weight inside each inner block distinguishes positive and negative weight-thirteen contributions that the scalar relaxation combines. A sparse certificate uses 2,575 terms per axis while preserving that optimum.
 
+The [all-depth two-error family](growing_two_error_gates.md) shows that the same kind of optimum persists beyond twenty-five qubits. Its interaction order is $d+4$ and its coupling budget is $(4d^2+21d+8)\omega/8$. The new ingredient is the location of the stabilizer-padding term: selecting an inactive frontier subtree preserves the active/padding pair correlations of the concatenation tree. Uniform selection among all inactive bottom blocks fails at larger depths. The theorem supplies exact native resource equalities; the sparse term-count existence bound and any practical synthesis algorithm are separate questions.
+
 ## Boundaries of the comparison
 
 The theorem concerns a fixed subspace code and a generator satisfying specified sector-intertwining identities. Its locality is tensor-Pauli weight. It does not impose geometric locality or constrain arbitrary circuits, moving encodings, measurement-assisted gates, or generalized autonomous schemes whose correction dynamics mixes syndrome sectors.

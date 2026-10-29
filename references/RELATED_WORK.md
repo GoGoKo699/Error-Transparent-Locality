@@ -94,6 +94,10 @@ The [sparse gate account](../science/sparse_protected_gates.md) uses the standar
 
 The [twenty-five-qubit two-error account](../science/two_error_gates.md) reuses the concatenated five-qubit code and signed stabilizer-dressing framework. Its explicit four-class construction attains interaction order thirteen and coupling budget $521\omega/8$ for every Pauli error of weight at most two. The additional resource obstruction resolves squared Pauli weights inside inner blocks, separating two weight-thirteen classes that the scalar total-weight relaxation merges. This code-specific result is proved and exactly certified here; the code, Pauli twirls, and generic syndrome-sector extension are inherited ingredients. No exhaustive literature-priority claim is made.
 
+## Growing two-error equality family
+
+The [all-depth two-error construction](../science/growing_two_error_gates.md) retains the inherited concatenated five-qubit code and signed logical-coset machinery. Its derived ingredient is the inactive-frontier padding law, which preserves the hierarchy-dependent active/padding correlations that a uniform inactive-block average loses. Combined with bottom-block moments, this gives exact interaction order $d+4$ and native budget $(4d^2+21d+8)\omega/8$ at every depth $m\ge2$. The all-depth equality proof and its exact certificates are supplied here; no claim of an exhaustive priority assessment or a hardware threshold is made.
+
 ## Source versions and remaining bibliographic boundary
 
 The links above identify published records where available. The following versioned preprints were used for the detailed comparison:

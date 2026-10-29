@@ -35,7 +35,7 @@ The distance-three, four-body bound is $J\ge7\omega$. A nine-term commuting Hami
 | Coupling budget $J/\omega$ | 7 | 4 |
 | Nonzero Pauli terms | 9 | 16 |
 
-The two examples establish exact optima at their respective interaction orders under the declared native budget. The four-body construction proves one logical axis. Higher-error saturation, universal four-body control, and minimal block size are not established.
+The two examples establish exact optima at their respective interaction orders under the declared native budget. The four-body construction proves one logical axis. Saturation of the unrestricted bound $r=d+t$ for $t>1$, universal four-body control, and minimal block size are not established.
 
 ## Connection to syndrome readout
 
@@ -44,6 +44,8 @@ For an odd-distance stabilizer code, attaining the protected-gate interaction or
 The [growing-distance construction](science/minimum_readout_safe_gates.md) attains the stronger bound for one protected error: on $[[5^m,1,3^m]]$ concatenated five-qubit codes, all three logical Pauli axes have strict transparency with interaction order $\ell=d+2$, coupling budget $J/\omega=d+1$, and $r_S=\infty$. Both resource bounds are optimal in the declared model. The $[[25,1,9]]$ instance uses eleven-body terms and $J/\omega=10$. The [sparse construction](science/sparse_protected_gates.md) replaces the exponential expansion by at most $4n$ terms per axis using an explicit exact recursion, with a separate existence bound of $3n+1$. The 25-qubit example has 75 terms and only three bare coefficient values. The gate guarantee protects one physical fault even when the code can correct more.
 
 The [two-error construction](science/two_error_gates.md) reaches interaction order thirteen on the $[[25,1,9]]$ code while retaining $r_S=\infty$. A block-resolved moment certificate proves the sharper code-specific coupling bound $J/\omega\ge521/8$, and four explicit term classes attain it for each logical Pauli axis. Thus both interaction order and the native coupling budget at that order are optimal for this code and protected error set.
+
+The [growing two-error family](science/growing_two_error_gates.md) extends that optimum to every concatenation depth $m\ge2$: for $d=3^m$, each logical Pauli axis attains $\ell=d+4$ and $J/\omega=(4d^2+21d+8)/8$, with $r_S=\infty$. The construction chooses stabilizer padding according to the active support tree. Uniform padding over inactive bottom blocks fails beyond depth two; the correlated rule has an all-depth proof and exact hierarchy checks.
 
 ## Read the work
 
@@ -72,7 +74,7 @@ Only Python 3.10 or later and its standard library are required:
 python verification/run_all.py
 ```
 
-The [verification guide](verification/README.md) explains the nine exact checks and links their committed JSON records. They cover full physical-space error identities, stabilizer signs, code distance, coupling normalization, finite primal/dual certificates, and control-phase formulas. No floating-point tolerance is used.
+The [verification guide](verification/README.md) explains the ten exact checks and links their committed JSON records. They cover full physical-space error identities, stabilizer signs, code distance, coupling normalization, finite primal/dual certificates, and control-phase formulas. No floating-point tolerance is used.
 
 ## Physical scope
 

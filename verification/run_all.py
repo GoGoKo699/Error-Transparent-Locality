@@ -21,6 +21,7 @@ CHECKS = (
     ("verify_readout_safe_family", "concatenated equality family, signed shells, and full single-error identities"),
     ("verify_sparse_gates", "sparse recursive gates, exact coefficients, signs, and full single-error identities"),
     ("verify_two_error_gates", "all two-error identities, block-moment optimum, and sparse optimal certificate"),
+    ("verify_growing_two_error", "all-depth two-error identities, frontier probabilities, and growing optimal budgets"),
 )
 
 
