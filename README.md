@@ -47,6 +47,8 @@ The [two-error construction](science/two_error_gates.md) reaches interaction ord
 
 The [growing two-error family](science/growing_two_error_gates.md) extends that optimum to every concatenation depth $m\ge2$: for $d=3^m$, each logical Pauli axis attains $\ell=d+4$ and $J/\omega=(4d^2+21d+8)/8$, with $r_S=\infty$. The construction chooses stabilizer padding according to the active support tree. Uniform padding over inactive bottom blocks fails beyond depth two; the correlated rule has an all-depth proof and exact hierarchy checks.
 
+The [exact sparse synthesis](science/sparse_two_error_synthesis.md) supplies positive sparse component classes, a rational pairwise coupling method, and a general reference compiler. An explicit 125-qubit gate uses 69,125 native Pauli terms per axis at interaction order 31 and the optimal budget $J/\omega=3491/8$. Exact integer orbit equations cover every one of the 70,126 protected errors; all three expanded logical axes are checked. The native coefficients have a 1,458-bit common denominator, so term count and exact description size remain separate resources.
+
 ## Read the work
 
 Start with the [scientific overview](science/README.md). The complete account is organized by topic:
@@ -74,7 +76,7 @@ Only Python 3.10 or later and its standard library are required:
 python verification/run_all.py
 ```
 
-The [verification guide](verification/README.md) explains the ten exact checks and links their committed JSON records. They cover full physical-space error identities, stabilizer signs, code distance, coupling normalization, finite primal/dual certificates, and control-phase formulas. No floating-point tolerance is used.
+The [verification guide](verification/README.md) explains the eleven exact checks and links their committed JSON records. They cover full physical-space error identities, stabilizer signs, code distance, coupling normalization, finite primal/dual certificates, and control-phase formulas. No floating-point tolerance is used.
 
 ## Physical scope
 
