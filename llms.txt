@@ -1,38 +1,59 @@
 # Error-Transparent Locality
 
-> Exact interaction-order and native Pauli coupling bounds for continuous error-transparent logical Hamiltonians, with a certified four-body single-axis construction.
+> Exact interaction-order and native Pauli coupling laws for fixed-code logical evolution through faults at unknown times, with sharp controls and entanglers on concatenated five-qubit codes.
 
-## Scientific story: what is established and why?
+## Scientific story: what question does the project answer?
 
-- [Overview](science/README.md): supported results and their logical dependencies.
-- [Model](science/model.md): fixed-code assumptions, full error-sector identities, scalar shifts, and resource definitions.
-- [Locality](science/locality.md): general proof of r >= d + t using Pauli-weight moments.
-- [Coupling cost](science/coupling_cost.md): exact finite moment relaxation, minimum-locality cost, and the known five-qubit comparison.
-- [Four-body construction](science/four_body_construction.md): literal stabilizers, logical operators, nine Hamiltonian terms, and full transparency proof.
-- [Control robustness](science/control_robustness.md): coefficient errors, fault-time phases, classical channel mixtures, and pulse schedules.
-- [Interpretation](science/interpretation.md): physical meaning and boundaries of the comparison.
+Start with [README](README.md) for the principal results and [scientific overview](science/README.md) for the complete theorem, construction, and proof map. Error correction repairs a recoverable error; exact error transparency additionally preserves the logical evolution despite its unknown arrival time. The project separates general all-code obstructions from attained, sharper optima on specified codes.
 
-## Theorem route: what assumptions support the bounds?
+## General theorem route: which assumptions support the bounds?
 
-Read the model before the locality proof, then the coupling account. The full physical-space intertwining identity is the hypothesis; logical compression alone does not establish transparency. The weight-moment argument proves the universal obstruction. The scalar moment problem is a necessary relaxation, whose general optimum need not be physically attainable. The four-body construction and the established five-qubit benchmark attain the stated single-error bounds at their respective interaction orders.
+- [Model](science/model.md): fixed encoding, detection distance d, full physical-space error-image identities, consistent scalar sector shifts, unknown fault time, and ideal final recovery.
+- [Locality](science/locality.md): Pauli twirls give vanishing interaction-weight moments and the general bound ell >= d+t. The foundational pages call interaction order r; it is distinct from syndrome reversibility distance r_S.
+- [Coupling cost](science/coupling_cost.md): the native absolute sum J of nonidentity bare Hermitian Pauli coefficients, logical half-splitting omega, finite scalar moment relaxation, closed cost at ell=d+t, and larger-order bounds.
+- [Four-body witness](science/four_body_construction.md): a literal nine-qubit CSS code and nine commuting terms attain ell=4 and J/omega=7 for one logical Z axis through one physical error.
 
-## Study route: how does Preskill lead to this project?
+Logical compression alone is insufficient to prove transparency. The constructions satisfy strict full intertwiners; the lower bounds also permit consistent scalar sector shifts. The general bounds allow degeneracy and arbitrary logical dimension. Scalar moment feasibility alone does not establish a physical gate, and unrestricted attainment of ell=d+t for t>1 is not established here. The canonical five-qubit protected Hamiltonian is prior work. The four-body witness establishes neither universal four-body control nor minimal block size.
 
-- [Learning entry](learning/README.md): one selected source and the relation between the study and specialist routes.
-- [Preskill bridge](learning/PRESKILL_BRIDGE.md): Chapter 7, updated March 2026; targeted sections, notation translation, assumptions, and the additional twirl, moment, coupling, and control steps.
-- [Thirty milestones](learning/MILESTONES.md): M01-M13 establish the background; M14-M30 build the research argument. Follow the earlier dependencies and scientific pointers attached to each target.
+## Sharp family route: what is attained through one, two, and three errors?
 
-The selected educational anchor is Preskill's Quantum Information, Chapter 7, Quantum Error Correction. Research references supply attribution and comparisons. The shared learning map describes scientific understanding targets and their dependencies.
+The fixed family Q_m=[[5^m,1,3^m]] has n=5^m, d=3^m, even stabilizers, odd nontrivial logical representatives, and r_S=infinity. Available logical weights strengthen the order bound to ell>=d+2t when 2t+1<=d. Each logical Pauli axis attains the minimum family order and its exact native coupling optimum at that order:
+
+- [Single-error family](science/minimum_readout_safe_gates.md): m>=1, ell=d+2, J/omega=d+1. [Sparse single-error synthesis](science/sparse_protected_gates.md) gives a 3n+1 support-existence bound, an explicit <=4n recursion with O(log n) coefficient bits, and a 75-term 25-qubit example.
+- [Two-error seed](science/two_error_gates.md): 25 qubits, ell=13, J/omega=521/8, and a 2,575-term exact sparse witness. [All-depth two-error optima](science/growing_two_error_gates.md): m>=2, ell=d+4, J/omega=(4d^2+21d+8)/8. [Sparse two-error synthesis](science/sparse_two_error_synthesis.md) supplies positive component profiles, pairwise coupling, a reference compiler, and a 69,125-term 125-qubit certificate with a 1,458-bit common native denominator.
+- [Three-error seed](science/three_error_gates.md): 25 qubits, ell=15, J/omega=2867/8, complete seven-pattern lower bound, and a forced outer weight-five logical branch. [All-depth three-error optima](science/growing_three_error_gates.md): m>=2, ell=d+6, J/omega=J_3(d)=(4d^3+51d^2+170d+24)/24, exact strict increment lifting, and the fixed-frame all-direction one-qubit budget.
+
+The higher-error lower bounds permit arbitrary competing Hamiltonians, including scalar shifts. The two-error frontier-padding rule is tied to its uniform-promotion ensemble; the later increment lifting supplies different optimal ensembles. The protected error weight stays fixed when the distance grows.
+
+## Entangling route: how are fixed blocks controlled together?
+
+[Protected entanglers and logical Pauli strings](science/protected_entangling_gates.md) treats a specified pure target h_L=Omega P+cI, Omega!=0, with P a nonidentity logical Pauli string on M fixed Q_m blocks, m>=2. If P has logical weight p>=1, its target minimum physical weight is D=pd, while ordinary code distance remains d. Through three physical errors, the exact law is ell_min=D+6 and J_min=|Omega|J_3(D) at that order. Target projection makes the lower bound apply to arbitrary physical Hamiltonians. Idle blocks use identity.
+
+The first logical ZZ gate on [[50,2,9]] has ell=24 and J/omega=1789. Local Pauli controls plus ZZ generate su(4), giving protected universal continuous encoded control in the declared model. The pure-string cost law does not assign a globally optimal sum of costs to an arbitrary mixed logical Hamiltonian at one common order cap. The first dense entangler contains 41,032,000,000 native words; practical sparse physical synthesis is not supplied.
+
+## Companion route: how does syndrome readout constrain gate design?
+
+[Gate/readout theorem](science/gate_readout_tradeoff.md) connects the gate moments to [Syndrome Reversibility Distance](https://github.com/GoGoKo699/Syndrome-Reversibility-Distance). For odd-distance stabilizer codes and 1<=t with 2t+1<=d, ell=d+t forces r_S=d+1, hence r_S>d+1 requires ell>=d+t+1. Fixed stabilized ancillas are included.
+
+The companion's experiment applies a specified known product unitary, measures the full original stabilizer syndrome ideally, and permits informed recovery afterwards. Per-block parity gives r_S=infinity for Q_m and its fixed product codes, including entangled logical inputs. Gate fault timing and readout measurement order are separate operational assumptions; their simultaneous algebraic guarantees are not a joint noisy threshold.
+
+## Control and resource route: what would an implementation need to preserve?
+
+[Control robustness](science/control_robustness.md) derives fault-time phases, coefficient-calibration constraints, exact failure of sequential commuting pulses, and a bounded repeated-cycle approximation. [Physical interpretation](science/interpretation.md) explains the cancellations and gate-duration consequences. The [construction catalog](science/README.md#construction-and-description-costs) compares finite terms, coefficient size, and response coverage.
+
+Interaction order counts the support of one native Pauli term. It is distinct from geometric range and total support. Native coupling J is distinct from operator norm, term count, coefficient description size, and full hardware cost. The protected generator must satisfy transparency throughout a pulse. Multiple faults are covered while every accumulated error remains in the protected set. Preparation, noisy syndrome extraction and recovery, efficient decoding, and synthesis from different control primitives require separate accounting.
+
+## Study route: how does Preskill lead to the final results?
+
+- [Learning entry](learning/README.md): specialist and educational routes.
+- [Preskill bridge](learning/PRESKILL_BRIDGE.md): the sole educational anchor is John Preskill, Quantum Information, Chapter 7, Quantum Error Correction, author-hosted draft updated March 2026. The bridge selects relevant sections, translates notation and Pauli phases, and adds the weight moments, resource optima, increment lifting, and entangling-control steps.
+- [Thirty milestones](learning/MILESTONES.md): M01-M12 establish background; M13-M30 follow the research narrative through joint readout constraints, sparse descriptions, three-error optima, and protected universal control. Use the project-defined dependencies and scientific references attached to each understanding target.
 
 ## Reproduction and attribution: what can be checked?
 
-- [Verification](verification/README.md): standard-library exact checks; run python verification/run_all.py.
-- [Construction data](verification/data/nine_qubit.json): one-based sites, positive stabilizer generators, bare Hermitian Pauli coefficients.
-- [Related work](references/RELATED_WORK.md): primary-source comparisons, inherited methods, and priority-assessment limits.
-- [Bibliography](references/references.bib): versioned primary-source metadata.
+- [Verification guide](verification/README.md): Python 3.10 or later, standard library only; run python verification/run_all.py. Fourteen checks compare exact results with committed JSON records without floating-point tolerance.
+- [Nine-qubit data](verification/data/nine_qubit.json): explicit code, bare Hermitian coefficients, and support conventions.
+- [Sparse two-error loader](verification/growing_two_error_sparse.py), [three-error recursion](verification/three_error_recursion.py), and [logical-string constructor](verification/logical_pauli_gates.py): executable exact descriptions with the scope stated in their science accounts.
+- [Related work](references/RELATED_WORK.md) and [bibliography](references/references.bib): primary-source attribution, inherited frameworks and code ingredients, nearest comparisons, and limits on priority claims.
 
-## Claim boundaries
-
-Correctability repairs an error after storage; exact transparency additionally preserves logical evolution through its unknown arrival time. Interaction order is an individual Pauli term's weight, distinct from total support or geometric range. The native coupling sum is distinct from an operator norm and from complete hardware cost. Preskill's stabilizer phase convention is translated in the bridge; native Hamiltonian coefficients multiply Hermitian Paulis.
-
-The four-body construction proves one logical axis on a nine-qubit distance-three code. It does not prove universal four-body control, minimal qubit count, or a complete hardware advantage. Higher-error moment costs are necessary bounds without asserted physical saturation. Native coupling sums do not include recovery or gadget synthesis. The canonical five-qubit protected construction is prior work. The general theorem does not cover arbitrary moving-code, circuit, or dissipative schemes. Commuting terms with correct integrated areas can still lose transparency when applied sequentially. Exact finite certificates complement the analytical proofs and do not replace them.
+Exact finite checks certify supplied instances and complete response-profile coverage. They do not replace the analytical universal, arbitrary-Hamiltonian, or arbitrary-depth proofs, nor do compact dense specifications imply small native expansions.
