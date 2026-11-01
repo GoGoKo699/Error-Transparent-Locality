@@ -23,6 +23,8 @@ CHECKS = (
     ("verify_two_error_gates", "all two-error identities, block-moment optimum, and sparse optimal certificate"),
     ("verify_growing_two_error", "all-depth two-error identities, frontier probabilities, and growing optimal budgets"),
     ("verify_two_error_synthesis", "positive components, pairwise compiler, and exact sparse 125-qubit gates"),
+    ("verify_three_error_gates", "all three-error identities, complete patterns, and optimal native coupling"),
+    ("verify_growing_three_error", "all-depth strict lifting, optimal budgets, and complete 125-qubit profiles"),
 )
 
 
