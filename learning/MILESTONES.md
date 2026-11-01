@@ -65,7 +65,7 @@ Dependencies point only to earlier milestones. The map connects the load-bearing
 
 **Central question.** How can a low-weight Pauli be harmless even when it is not identity?
 
-**Understanding target.** Detection distance $d$ makes every weight-below-$d$ compression scalar. The scalar need not vanish. Products of two weight-at-most-$t$ errors have weight at most $2t$, giving correction when $d\ge2t+1$. Low-weight stabilizers and coincident error images are compatible with this condition.
+**Understanding target.** Detection distance $d$ makes every Pauli compression at weight below $d$ scalar. The scalar need not vanish. Products of two errors of weight at most $t$ have weight at most $2t$, giving correction when $d\ge2t+1$. Low-weight stabilizers and coincident error images are compatible with this condition.
 
 **Earlier dependencies and story role.** [M03](#m03), [M04](#m04). This supplies the hypothesis that removes low interaction weights without assuming nondegeneracy.
 
@@ -130,7 +130,7 @@ Dependencies point only to earlier milestones. The map connects the load-bearing
 
 **Central question.** How can conjugation by local errors expose the support of an interaction?
 
-**Understanding target.** The one-site twirl $\mathcal R_i$ fixes a Pauli with identity at that site and kills any nonidentity label there. Thus $\mathcal W=\sum_i(\mathrm{Id}-\mathcal R_i)$ has eigenvalue $w$ on weight-$w$ Paulis. Its $j$th power expands into conjugations by errors of weight at most $j$.
+**Understanding target.** The one-site twirl $\mathcal R_i$ fixes a Pauli with identity at that site and kills any nonidentity label there. Thus $\mathcal W=\sum_i(\mathrm{Id}-\mathcal R_i)$ has eigenvalue $w$ on Paulis of weight $w$. Its power of order $j$ expands into conjugations by errors of weight at most $j$.
 
 **Earlier dependencies and story role.** [M02](#m02), [M08](#m08). This supplies the operator mechanism relating the protected error set to interaction weights.
 
@@ -171,7 +171,7 @@ Dependencies point only to earlier milestones. The map connects the load-bearing
 
 **Central question.** Why must a nontrivial protected generator reach weight $d+t$?
 
-**Understanding target.** With fewer than $t+1$ available weights, a degree-at-most-$t$ polynomial can vanish at every contributing weight while equaling one at zero. The moment equations would then make the nontrivial logical generator vanish. Hence $\ell\ge d+t$, and full correction gives $\ell\ge3t+1$. Missing coset weights can strengthen the argument.
+**Understanding target.** With fewer than $t+1$ available weights, a polynomial of degree at most $t$ can vanish at every contributing weight while equaling one at zero. The moment equations would then make the nontrivial logical generator vanish. Hence $\ell\ge d+t$, and full correction gives $\ell\ge3t+1$. Missing coset weights can strengthen the argument.
 
 **Earlier dependencies and story role.** [M08](#m08), [M10](#m10)–[M12](#m12). This is the first general consequence of the assembled framework.
 
@@ -197,7 +197,7 @@ Dependencies point only to earlier milestones. The map connects the load-bearing
 
 **Central question.** How can different physical representatives produce the same protected logical motion?
 
-**Understanding target.** The specified degenerate $[[9,1,3]]$ CSS code has nine commuting logical-$Z$ representatives. Their signed site incidences vanish, proving full one-error transparency. Cubic mass four and quartic mass minus three attain $\ell=4$ and $J=7\omega$. Energy plateaus explain the diagonal action, while CSS coherence and quantum distance supply protection against all single-qubit Pauli errors.
+**Understanding target.** The specified degenerate $[[9,1,3]]$ CSS code has nine commuting logical $Z$ representatives. Their signed site incidences vanish, proving full one-error transparency. Cubic mass four and quartic mass minus three attain $\ell=4$ and $J=7\omega$. Energy plateaus explain the diagonal action, while CSS coherence and quantum distance supply protection against all single-qubit Pauli errors.
 
 **Earlier dependencies and story role.** [M06](#m06), [M08](#m08), [M14](#m14). This turns the necessary bound into a complete equality example for one logical axis.
 
@@ -236,7 +236,7 @@ Dependencies point only to earlier milestones. The map connects the load-bearing
 
 **Central question.** Why does attaining $\ell=d+t$ force $r_S=d+1$ at odd distance?
 
-**Understanding target.** At odd $d\ge3$, with $t\ge1$ and $d\ge2t+1$, the moment equations force a nonzero weight-$(d+1)$ logical contribution. Fixed qubits are first removed by a partial matrix element preserving full transparency, distance, and $r_S$. The resulting logical representative is an even circuit. Thus $r_S>d+1$ requires $\ell\ge d+t+1$. The nine-qubit code has $r_S=4$ with readout loss $3q^2-2q^3$, where $q=\sin^2(\theta/2)$ and $0\le\theta\le\pi/2$, for its specified four-site rotation.
+**Understanding target.** At odd $d\ge3$, with $t\ge1$ and $d\ge2t+1$, the moment equations force a nonzero logical contribution at weight $(d+1)$. Fixed qubits are first removed by a partial matrix element preserving full transparency, distance, and $r_S$. The resulting logical representative is an even circuit. Thus $r_S>d+1$ requires $\ell\ge d+t+1$. The nine-qubit code has $r_S=4$ with readout loss $3q^2-2q^3$, where $q=\sin^2(\theta/2)$ and $0\le\theta\le\pi/2$, for its specified four-site rotation.
 
 **Earlier dependencies and story role.** [M13](#m13)–[M15](#m15), [M17](#m17). This joins the gate mechanism to the readout structure with all assumptions retained.
 

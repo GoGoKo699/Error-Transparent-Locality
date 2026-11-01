@@ -63,7 +63,7 @@ The [strict lifting theorem](growing_three_error_gates.md) combines complete chi
 
 ## Sparse descriptions and synthesis costs
 
-Native coefficient cost, term count, and exact coefficient description are different resources. The dense single-error 25-qubit expansion contains 28,000 terms, but the [sparse construction](sparse_protected_gates.md) gives a 75-term exact example and an arbitrary-depth bound of $4n$ terms with $O(\log n)$-bit coefficients, hence polynomially bounded denominators.
+Native coefficient cost, term count, and exact coefficient description are different resources. The dense single-error 25-qubit expansion contains 28,000 terms, but the [sparse construction](sparse_protected_gates.md) gives a 75-term exact example and an arbitrary-depth bound of $4n$ terms whose coefficient descriptions use $O(\log n)$ bits, hence polynomially bounded denominators.
 
 For two errors, a 2,575-term certificate per axis preserves the twenty-five-qubit optimum. The [sparse two-error synthesis](sparse_two_error_synthesis.md) supplies an explicit 125-qubit certificate with 69,125 native terms per axis, order 31, and optimal $J/\omega=3491/8$. Separate positive 25-qubit component certificates preserve full two-error profiles for recursion. Exact pairwise child coupling suffices because a protected error touches at most two child factors. The 1,458-bit common coefficient denominator and the reference compiler's high polynomial degree are description and synthesis costs beyond the absolute coupling budget.
 
