@@ -25,6 +25,7 @@ CHECKS = (
     ("verify_two_error_synthesis", "positive components, pairwise compiler, and exact sparse 125-qubit gates"),
     ("verify_three_error_gates", "all three-error identities, complete patterns, and optimal native coupling"),
     ("verify_growing_three_error", "all-depth strict lifting, optimal budgets, and complete 125-qubit profiles"),
+    ("verify_entangling_gates", "optimal protected entanglers, full 50-qubit coverage, and universal encoded control"),
 )
 
 
