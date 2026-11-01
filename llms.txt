@@ -46,8 +46,9 @@ Interaction order counts the support of one native Pauli term. It is distinct fr
 ## Study route: how does Preskill lead to the final results?
 
 - [Learning entry](learning/README.md): specialist and educational routes.
-- [Preskill bridge](learning/PRESKILL_BRIDGE.md): the sole educational anchor is John Preskill, Quantum Information, Chapter 7, Quantum Error Correction, author-hosted draft updated March 2026. The bridge selects relevant sections, translates notation and Pauli phases, and adds the weight moments, resource optima, increment lifting, and entangling-control steps.
+- [Preskill bridge](learning/PRESKILL_BRIDGE.md): the single educational anchor shared with Syndrome Reversibility Distance is John Preskill, Quantum Information, Chapter 7, Quantum Error Correction, author-hosted draft updated March 2026. This project's bridge selects relevant sections, translates notation and Pauli phases, and adds the weight moments, resource optima, increment lifting, and entangling-control steps.
 - [Thirty milestones](learning/MILESTONES.md): M01-M12 establish background; M13-M30 follow the research narrative through joint readout constraints, sparse descriptions, three-error optima, and protected universal control. Use the project-defined dependencies and scientific references attached to each understanding target.
+- [Sister project's Preskill bridge](https://github.com/GoGoKo699/Syndrome-Reversibility-Distance/blob/main/learning/PRESKILL_BRIDGE.md): the same chapter leads through a distinct bridge and 30-milestone map to prescribed syndrome measurement and optimal recovery. Keep that readout experiment separate from unknown-time gate faults.
 
 ## Reproduction and attribution: what can be checked?
 

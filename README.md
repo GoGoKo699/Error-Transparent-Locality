@@ -66,10 +66,10 @@ The first entangler's compact dense specification contains **41,032,000,000 nati
 | Check definitions and general bounds | [Model](science/model.md) → [locality](science/locality.md) → [coupling cost](science/coupling_cost.md) |
 | Inspect explicit controls and entanglers | [Construction catalog](science/README.md#construction-and-description-costs) and [protected logical strings](science/protected_entangling_gates.md) |
 | Understand fault-sensitive control schedules | [Control robustness](science/control_robustness.md) and [physical interpretation](science/interpretation.md) |
-| Study from the selected educational source | [Learning guide](learning/README.md), [Preskill bridge](learning/PRESKILL_BRIDGE.md), and [30 milestones](learning/MILESTONES.md) |
+| Study from the shared educational anchor | [Learning guide](learning/README.md), [Preskill bridge](learning/PRESKILL_BRIDGE.md), and [30 milestones](learning/MILESTONES.md) |
 | Check attribution and nearest precedents | [Related work](references/RELATED_WORK.md) and [bibliography](references/references.bib) |
 
-The sole educational anchor is **John Preskill, _Quantum Information_, Chapter 7, “Quantum Error Correction”**, in the author-hosted draft updated March 2026. The bridge selects relevant sections and translates notation and Pauli phases. The learner-independent map has twelve background and eighteen narrative milestones, following the dependencies through protected entanglers and universal encoded control.
+The single educational anchor, shared with [Syndrome Reversibility Distance](https://github.com/GoGoKo699/Syndrome-Reversibility-Distance), is **John Preskill, _Quantum Information_, Chapter 7, “Quantum Error Correction”**, in the author-hosted draft updated March 2026. Each project has its own Preskill bridge and 30-milestone map. This project's bridge selects relevant sections and translates notation and Pauli phases; its twelve background and eighteen narrative milestones follow the dependencies through protected entanglers and universal encoded control. The [sister project's Preskill bridge](https://github.com/GoGoKo699/Syndrome-Reversibility-Distance/blob/main/learning/PRESKILL_BRIDGE.md) develops the separate syndrome-readout argument from the same foundation.
 
 ## Reproduce the certificates
 
