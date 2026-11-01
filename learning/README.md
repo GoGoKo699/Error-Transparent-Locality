@@ -2,13 +2,15 @@
 
 The central question is how demanding the same logical evolution before and after a correctable error constrains the physical Hamiltonian. The route starts with encoded states and correction, then follows Pauli-weight moments into interaction and coupling bounds. It connects those bounds to syndrome readout, optimal gates through three physical errors on concatenated codes, sparse descriptions, and protected entanglers on fixed product codes.
 
-## One educational anchor
+## One shared educational anchor
 
-The selected source is **John Preskill, _Quantum Information_, Chapter 7, “Quantum Error Correction”**, in the author-hosted prepublication draft updated March 2026. The [official course index](https://preskill.caltech.edu/ph229/index.html) links the [complete chapter](https://www.preskill.caltech.edu/ph219/chap7_26_6A.pdf). The repository links to that draft; it does not redistribute it.
+Error-Transparent Locality and Syndrome Reversibility Distance use one common educational anchor: **John Preskill, _Quantum Information_, Chapter 7, “Quantum Error Correction”**, in the author-hosted prepublication draft updated March 2026. The [official course index](https://preskill.caltech.edu/ph229/index.html) links the [complete chapter](https://www.preskill.caltech.edu/ph219/chap7_26_6A.pdf). The repositories link to that draft; they do not redistribute it.
 
-The core reading is §§7.2–7.4 for exact correction, its interpretations, and distance; §§7.6–7.8 for classical linear codes and CSS codes; §§7.9–7.11 for code bounds, stabilizers, and the five-qubit code; and §7.17 for concatenation. This is a targeted route through one source. The research references remain attribution and comparison sources, rather than additional educational anchors.
+The common foundation is §§7.2–7.4 for exact correction, logical information leakage, reference decoupling, and distance; §§7.6–7.8 for classical linear codes and CSS codes; §§7.10–7.11 for stabilizers, encoded Pauli operators, and the five-qubit code; and §7.17 for concatenation. Section 7.9 supplies additional code-parameter context for the gate comparisons. This is a targeted route through one source. The research references remain attribution and comparison sources, rather than additional educational anchors.
 
 Begin with the [Preskill-to-project bridge](PRESKILL_BRIDGE.md). It translates the source's notation and assumptions, including its stabilizer convention for $Y$, into the repository's Hermitian Pauli basis. Its worked example explains why correcting a fault need not correct the angle accumulated during a gate. The later sections supply the additional moment, readout, sparse-synthesis, and tensor-lifting steps needed for the final results. The [bibliography](../references/references.bib) records the source version under `Preskill2026QEC`.
+
+The [companion readout bridge](https://github.com/GoGoKo699/Syndrome-Reversibility-Distance/blob/main/learning/PRESKILL_BRIDGE.md) follows the same foundation into logical measurement effects, informed recovery, support collisions, and the sharp error exponent. Each repository keeps its own 30-milestone map and locally develops the steps needed for its scientific question. This route emphasizes dynamics, moment bounds, and native Hamiltonian resources.
 
 ## The 30-milestone route
 

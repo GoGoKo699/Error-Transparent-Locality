@@ -1,8 +1,10 @@
 # From Preskill's QEC foundations to error-transparent locality
 
-This bridge uses one external anchor: John Preskill, *Quantum Information*, Chapter 7, updated March 2026. The [author's course index](https://preskill.caltech.edu/ph229/index.html) links the [complete chapter](https://www.preskill.caltech.edu/ph219/chap7_26_6A.pdf). Page numbers below are the chapter's printed numbers; PDF viewer numbers are six larger.
+Error-Transparent Locality and Syndrome Reversibility Distance share one educational anchor: John Preskill, *Quantum Information*, Chapter 7, updated March 2026. The [author's course index](https://preskill.caltech.edu/ph229/index.html) links the [complete chapter](https://www.preskill.caltech.edu/ph219/chap7_26_6A.pdf). Page numbers below are the chapter's printed numbers; PDF viewer numbers are six larger.
 
 Preskill supplies the foundations of correctability, distance, CSS codes, stabilizers, and concatenation. The Hamiltonian, twirl, moment, coupling, and control arguments below are supplied locally. Sections 9–14 connect them to the separate syndrome-readout experiment, optimal concatenated families through three physical errors, sparse synthesis, and protected logical strings. Their complete statements and proofs are in the [scientific account](../science/README.md). The [milestone map](MILESTONES.md) organizes a progression through those dependencies.
+
+The [companion Preskill bridge](https://github.com/GoGoKo699/Syndrome-Reversibility-Distance/blob/main/learning/PRESKILL_BRIDGE.md) begins from the same source and follows logical measurement effects, optimized recovery, support circuits, and readout loss. The common foundation does not identify the two operational models. This bridge develops the dynamics and native-resource arguments needed for protected Hamiltonians; the companion bridge develops the prescribed-measurement question.
 
 ## 1. From correctability to protected motion
 
@@ -35,6 +37,8 @@ The [model](../science/model.md#2-exact-error-transparency) states the assumptio
 
 ## 2. Targeted Preskill sections
 
+The shared foundation route is §§7.2–7.4, §§7.6–7.8, §§7.10–7.11, and §7.17. Section 7.9 adds code-parameter context for this account. The table identifies the actual source locations; the bridge supplies the later project-specific steps.
+
 | Chapter location | Printed pages | Foundation used here |
 |---|---:|---|
 | [§7.2](https://www.preskill.caltech.edu/ph219/chap7_26_6A.pdf#page=10), especially Eq. (7.17) | 4–7 | Correctable error spans; recovery; degeneracy |
@@ -62,6 +66,8 @@ The five-qubit code is foundational input. Its canonical error-transparent Hamil
 | §7.10.2: $(\alpha\mid\beta)=Z(\alpha)X(\beta)$ | $\alpha$ lists $Z$ support and $\beta$ lists $X$ support; literal Pauli phases are retained |
 
 The $Y$ conversion matters in a Hamiltonian calculation. If a word contains $m$ sites with both bits set, its Hermitian representative is $(-i)^m Z(\alpha)X(\beta)$. Binary labels retain commutation and support information, but coefficient signs require the phase as well. Conjugation is always $E^\dagger B E$; the shorter $EBE$ is valid for the repository's Hermitian Paulis, not for Preskill's anti-Hermitian $Y_{\rm P}$.
+
+Both project bridges use $V$ for encoding, $P$ for the code projector, and Hermitian physical Paulis. This account writes $K$ for logical Hilbert-space dimension; the companion readout account writes $D$. In Section 14 below, $D=pd$ instead denotes the explicitly defined minimum weight of a target logical coset. These are notation translations, not changes in code or resource definitions.
 
 ### Compression, detection, and correction
 
