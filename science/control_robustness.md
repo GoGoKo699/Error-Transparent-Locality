@@ -235,7 +235,7 @@ If the nominal envelope has the intended area, a direct total-target bound also 
 
 Thus $|\delta_i(\tau)|\le\eta_1$, where $\eta_1=\int_0^T\sum_S|\epsilon_S(t)|dt$. Every branch then has $1-F_e\le\min\{1,\eta_1^2\}$ and diamond distance at most $\min\{2,2\eta_1\}$. This last estimate bounds ordinary angle error and fault-dependent phase together.
 
-For a perturbation outside the nine-term family, a conservative comparison remains available. Take a calibrated nominal envelope, $\int_0^Tg(t)dt=\Theta$, and let $H_{\mathrm{actual}}(t)=g(t)H_\star+V_{\mathrm{err}}(t)$. Duhamel's formula on the intervals before and after a fixed Pauli fault yields an operator-norm difference at most $\int_0^T\|V_{\mathrm{err}}(t)\|dt$ between actual and nominal faulty propagators. Encoding and the same final ideal recovery therefore give
+For a perturbation outside the nine-term family, a conservative comparison remains available. Take a calibrated nominal envelope, $\int_0^Tg(t)dt=\Theta$, and let $H_{\mathrm{actual}}(t)=g(t)H_\star+V_{\mathrm{err}}(t)$. Duhamel's formula on the intervals before and after a fixed Pauli fault yields an operator-norm difference at most $\int_0^T\lVert V_{\mathrm{err}}(t)\rVert dt$ between actual and nominal faulty propagators. Encoding and the same final ideal recovery therefore give
 
 ```math
 \text{(C18)}\qquad \|\mathcal E_{\mathrm{actual}}-\mathcal U_\Theta\|_\diamond
