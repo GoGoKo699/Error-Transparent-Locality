@@ -22,6 +22,7 @@ This account establishes a general constraint, realizes its first nontrivial equ
 | [Exact sparse two-error synthesis](sparse_two_error_synthesis.md) | Positive class certificates, pairwise recursive compiler, and an exact 69,125-term optimum on 125 qubits |
 | [Three-error protected gates](three_error_gates.md) | The twenty-five-qubit code attains order fifteen with exact native axis budget $2867/8$ and a forced outer weight-five logical branch |
 | [Growing three-error optima](growing_three_error_gates.md) | Strict tensor lifting attains $\ell=d+6$ and $J/\omega=(4d^3+51d^2+170d+24)/24$ at every depth $m\ge2$ |
+| [Protected entanglers and Pauli strings](protected_entangling_gates.md) | Fixed product codes attain order $pd+6$ and budget $J_3(pd)$ for a logical Pauli string of weight $p$; local controls and $ZZ$ give universal encoded control |
 
 The [related-work account](../references/RELATED_WORK.md) gives the nearest precedents and their hypotheses. The [verification guide](../verification/README.md) provides reproducible exact certificates.
 
@@ -43,7 +44,7 @@ Let $d$ be the detection distance, $t$ the largest protected Pauli-error weight,
 | On $[[5^m,1,3^m]]$ codes with $m\ge2$, two-error transparency attains $\ell=d+4$ and $J/\omega=(4d^2+21d+8)/8$ | All-depth support-tree probability proof and block-moment dual certificate; exact hierarchy checks and independent depth-three enumeration |
 | A fault at site $i$ and time $\tau$ produces recovered angle $A-2B_i(\tau)$ in the nine-support control family | Full propagator derivation; exact phase checks and explicit sequencing failure |
 
-The higher-error entries $71,799,9439$ in the minimum-locality budget are necessary bounds. They are not claimed as realized gates. The explicit four-body gate is one continuous logical axis; universal control and minimal physical block size remain outside the established result.
+The higher-error entries $71,799,9439$ in the minimum-locality budget are necessary bounds. They are not claimed as realized gates. The explicit four-body gate is one continuous logical axis; universal four-body control and minimal physical block size remain outside the established four-body result.
 
 ## Logical dependencies
 

@@ -53,6 +53,8 @@ The [three-error construction](science/three_error_gates.md) attains minimum int
 
 The [all-depth three-error theorem](science/growing_three_error_gates.md) extends these optima to every $m\ge2$: $\ell=d+6$ and $J/\omega=(4d^3+51d^2+170d+24)/24$, with $r_S=\infty$. A strict truncated-tensor lifting rule combines the zero- through three-error hierarchy and preserves the optimal native budget. At 125 qubits it gives order 33 and $J/\omega=40175/8$; eleven exact response profiles cover all 8,649,376 protected errors. The recursion specifies a dense Hamiltonian and does not assert efficient native expansion or physical synthesis.
 
+The [protected entangler](science/protected_entangling_gates.md) keeps the product code and its original syndrome measurement fixed. On two 25-qubit blocks, it implements a three-error-transparent logical $ZZ$ generator at optimal order 24 and exact budget $J/\omega=1789$, while $r_S=\infty$. More generally, a specified logical Pauli string of weight $p$ attains $\ell=pd+6$ and $J/\omega=J_3(pd)$. The target coset minimum $pd$ differs from the ordinary code distance $d$. Together with protected local controls this gives universal encoded control in the native Hamiltonian model. The finite certificate covers all 540,376 protected errors for all nine logical axis products; its compact dense specification has 41,032,000,000 native terms.
+
 ## Read the work
 
 Start with the [scientific overview](science/README.md). The complete account is organized by topic:
@@ -80,7 +82,7 @@ Only Python 3.10 or later and its standard library are required:
 python verification/run_all.py
 ```
 
-The [verification guide](verification/README.md) explains the thirteen exact checks and links their committed JSON records. They cover full physical-space error identities, stabilizer signs, code distance, coupling normalization, finite primal/dual certificates, and control-phase formulas. No floating-point tolerance is used.
+The [verification guide](verification/README.md) explains the fourteen exact checks and links their committed JSON records. They cover full physical-space error identities, stabilizer signs, code distance, coupling normalization, finite primal/dual certificates, and control-phase formulas. No floating-point tolerance is used.
 
 ## Physical scope
 
