@@ -2,7 +2,7 @@
 
 This bridge uses one external anchor: John Preskill, *Quantum Information*, Chapter 7, updated March 2026. The [author's course index](https://preskill.caltech.edu/ph229/index.html) links the [complete chapter](https://www.preskill.caltech.edu/ph219/chap7_26_6A.pdf). Page numbers below are the chapter's printed numbers; PDF viewer numbers are six larger.
 
-Preskill supplies the foundations of correctability, distance, CSS codes, and stabilizers. The Hamiltonian, twirl, moment, coupling, and control arguments below are supplied locally. Their complete statements and proofs are in the [scientific account](../science/README.md). The [milestone map](MILESTONES.md) organizes a separate progression through those dependencies.
+Preskill supplies the foundations of correctability, distance, CSS codes, stabilizers, and concatenation. The Hamiltonian, twirl, moment, coupling, and control arguments below are supplied locally. Sections 9–14 connect them to the separate syndrome-readout experiment, optimal concatenated families through three physical errors, sparse synthesis, and protected logical strings. Their complete statements and proofs are in the [scientific account](../science/README.md). The [milestone map](MILESTONES.md) organizes a progression through those dependencies.
 
 ## 1. From correctability to protected motion
 
@@ -45,8 +45,9 @@ The [model](../science/model.md#2-exact-error-transparency) states the assumptio
 | [§§7.10.1–7.10.2](https://www.preskill.caltech.edu/ph219/chap7_26_6A.pdf#page=33) | 27–31 | Stabilizers, phases, symplectic notation |
 | [§§7.10.3–7.10.4](https://www.preskill.caltech.edu/ph219/chap7_26_6A.pdf#page=37) | 31–34 | CSS checks and encoded Pauli operators |
 | [§7.11](https://www.preskill.caltech.edu/ph219/chap7_26_6A.pdf#page=40) | 34–37 | The five-qubit code underlying the comparison |
+| [§7.17](https://www.preskill.caltech.edu/ph219/chap7_26_6A.pdf#page=54) | 48–50 | Inner and outer encodings; concatenation and multiplicative distance bounds |
 
-The five-qubit code in the last row is foundational input. Its canonical error-transparent Hamiltonian and coefficient accounting are developed in the [local benchmark](../science/coupling_cost.md#the-five-qubit-benchmark), with attribution to its original construction.
+The five-qubit code is foundational input. Its canonical error-transparent Hamiltonian and coefficient accounting are developed in the [local benchmark](../science/coupling_cost.md#the-five-qubit-benchmark), with attribution to its original construction. Section 7.17 supplies the concatenation framework. The exact parity, response, coupling, and tensor-lifting results for the family below are local derivations, not theorems attributed to that chapter.
 
 ## 3. Notation and assumptions
 
@@ -425,4 +426,236 @@ The energy-plateau description in the construction makes the diagonal Hamiltonia
 
 The [verification guide](../verification/README.md) describes two independent exact representations of the nine-qubit certificate: signed Pauli-projector multiplication and binary CSS/energy calculations. These certify the finite example. The universal theorem rests on the mathematical moment argument, and the scalar moment optimum alone does not certify a physical Hamiltonian.
 
-The resulting capability is one continuous logical axis with strict transparency to all single-qubit errors, maximum Pauli weight four, and $J=7\omega$. A universal four-body gate set, the smallest block size, arbitrary control-error tolerance, and the cost of realizing the native interactions require additional results. The [scientific interpretation](../science/interpretation.md) and [source comparison](../references/RELATED_WORK.md) retain those boundaries.
+The resulting capability of this nine-qubit construction is one continuous logical axis with strict transparency to all single-qubit errors, maximum Pauli weight four, and $J=7\omega$. A universal four-body gate set, the smallest block size, arbitrary control-error tolerance, and the cost of realizing these native interactions require additional results. The later protected universal controls use the different, explicitly stated interaction orders below. The [scientific interpretation](../science/interpretation.md) and [source comparison](../references/RELATED_WORK.md) retain those boundaries.
+
+## 9. The same code in a syndrome-readout experiment
+
+The gate problem constrains evolution after a protected fault. The syndrome-readout problem asks what information survives a prescribed measurement after a known physical transformation. Its operational order is fixed: apply a specified product unitary, measure the full original stabilizer syndrome ideally, and then allow an arbitrary recovery informed of both the unitary and the outcome. Those access and measurement assumptions are part of the statement.
+
+For a stabilizer code, write $S$ for the phase-free stabilizer group and $N$ for its Pauli centralizer. The readout project's [support criterion](https://github.com/GoGoKo699/Syndrome-Reversibility-Distance/blob/main/science/support_criterion.md) uses
+
+```math
+r_S=\min_{\substack{g\in S,\ L\in N\setminus S\\
+\operatorname{supp}(g)=\operatorname{supp}(L)}}
+\operatorname{wt}(gL),\qquad \min\varnothing=\infty.
+```
+
+Equal support allows a stabilizer and a logically nontrivial term to enter the same measurement-conditioned expansion. The support criterion and its converse establish the recoverability consequence; equality of supports by itself is not a replacement for that proof. Its [circuit characterization](https://github.com/GoGoKo699/Syndrome-Reversibility-Distance/blob/main/science/support_criterion.md#4-equivalent-characterization-by-even-logical-circuits) identifies $r_S$ with the smallest even logical-circuit weight. A logical circuit is a nontrivial normalizer word with no proper nonempty normalizer subword, keeping its actual local Pauli labels. These are imported research-level ingredients. Preskill's correctability and stabilizer sections provide their language, while the cited readout account supplies these theorems.
+
+The [joint gate/readout theorem](../science/gate_readout_tradeoff.md#2-joint-theorem) combines that circuit result with the weight moments. For a stabilizer code encoding at least one qubit, odd $d\ge3$, $t\ge1$, and $d\ge2t+1$, a nontrivial exactly transparent generator obeys
+
+```math
+\ell=d+t\ \Longrightarrow\ r_S=d+1,
+\qquad
+r_S>d+1\ \Longrightarrow\ \ell\ge d+t+1.
+```
+
+The proof has three dependencies. First remove fixed physical qubits. After local Pauli-basis changes, an encoder factors as $V_{\rm red}\otimes|a\rangle$ on those sites. The partial matrix element $H_{\rm red}=\langle a|H|a\rangle$, rather than a partial trace, retains the full transparency identity and cannot increase Pauli order. Distance and $r_S$ are unchanged. Second, at minimum order every allowed weight $d,\ldots,d+t$ must have nonzero logical contribution; otherwise the annihilating-polynomial contradiction applies. Thus a weight-$(d+1)$ logical representative exists. Third, on the reduced code it has no proper normalizer subword: a stabilizer subword would remove at least two sites and violate distance; a logical subword would leave a forbidden weight-one normalizer. It is therefore an even circuit. Parity and distance give $r_S=d+1$.
+
+The fixed-qubit step matters. Appending a fixed qubit to the five-qubit code creates a weight-four logical representative by multiplying a weight-three logical by the extra stabilizer. It does not create a circuit or change $r_S=\infty$.
+
+For the nine-qubit construction, $Z_{1368}$ is an even circuit. The [explicit equal-support witness](../science/gate_readout_tradeoff.md#3-the-distance-three-comparison) gives $r_S=4$. Rotating its four sites about $Z$ by a common angle $\theta$ gives, with $q=\sin^2(\theta/2)$ and $0\le\theta\le\pi/2$,
+
+```math
+e_{\rm opt}=\varepsilon_{\rm opt}
+=3q^2-2q^3=\frac3{16}\theta^4+O(\theta^6).
+```
+
+Here $e_{\rm opt}$ is optimal entanglement infidelity and $\varepsilon_{\rm opt}$ is optimal half-diamond error in that readout experiment. The known rotation can still cause information loss because the measurement is prescribed. This formula does not describe an unknown-time gate fault, and the two models do not automatically compose.
+
+## 10. Concatenation, parity, and one-error gates
+
+Preskill §7.17 defines concatenation by replacing each qubit of an outer encoding with an inner encoded qubit. Applying that construction repeatedly to the five-qubit code gives
+
+```math
+Q_m=[[5^m,1,3^m]],\qquad n=5^m,\quad d=3^m.
+```
+
+The [local distance proof](../science/minimum_readout_safe_gates.md#1-code-family-and-readout-property) establishes equality: a nontrivial outer logical uses at least three active inner blocks, and each costs at least the inner distance; minimum representatives attain the product. The same induction proves that every stabilizer has even weight and every nontrivial logical representative has odd weight. At the seed, stabilizers have weight zero or four and logical representatives have weight three or five. Lifting through disjoint blocks preserves these parities, as does multiplication by commuting stabilizers.
+
+Equal-support stabilizer/logical pairs are therefore impossible, giving $r_S=\infty$ under the readout model of Section 9. Odd logical weights also strengthen the gate obstruction. Protecting errors through weight $t$ needs at least $t+1$ contributing logical weights, so
+
+```math
+\ell\ge d+2t
+```
+
+when $2t+1\le d$. This uses the particular family's coset parity; infinite $r_S$ alone does not establish this full bound for every code.
+
+For one-error protection, let $T^{(0)}$ and $T^{(1)}$ be normalized averages of positive signed representatives of one logical axis at weights $d$ and $d+2$. A positive signed representative $Q$ obeys $QV_m=V_m\alpha$, even when its bare Hermitian sign is negative. The recursive averages have coefficient mass $d/(3n)$ and $(d+2)/(3n)$, respectively, for each specified nonidentity local label at each specified site. Thus
+
+```math
+H_\alpha=\frac{d+2}{2}T^{(0)}-\frac d2T^{(1)}
+```
+
+has coefficient sum one and zero signed mass on every local label. Conjugation by a single-site Pauli reverses two of those labels, leaving the logical response one. This proves the full identity $H_\alpha EV_m=EV_m\alpha$, not only its compression. The disjoint weights and positive class coordinates give
+
+```math
+\ell=d+2,\qquad J/\omega=d+1.
+```
+
+The parity obstruction proves minimum order, and the one-error coupling bound proves minimum cost at that order. The construction supplies each of $X,Y,Z$. It protects one physical error even when the larger-distance code corrects many more. The [full account](../science/minimum_readout_safe_gates.md) gives a correctable weight-two error that this one-error Hamiltonian does not treat transparently.
+
+The dense expansion is a description choice. The [sparse one-error construction](../science/sparse_protected_gates.md) writes transparency as normalization plus $3n$ local incidence equations. With the two weight-class signs fixed, nonnegative support reduction leaves at most $3n+1$ native terms and retains the forced masses, hence the optimum. A separate explicit recursion uses translation orbits to reduce the constraints to normalization and three axis counts. It produces at most four orbits, hence $4n$ terms, with $O(\log n)$-bit rational coefficients and no exponentially large candidate list. The general $3n+1$ reduction has a weaker coefficient-size guarantee. At 25 qubits, a three-orbit certificate gives 75 terms, order eleven, and cost ten.
+
+Sparsity does not remove the need to hold the complete protected combination during a pulse. In the declared relative coefficient-error model, the residual sector-rate difference is bounded by $2\eta J$. Exact coefficient bit length and this algebraic sensitivity bound are different from an experimental calibration guarantee.
+
+## 11. Two-error gates and sparse response preservation
+
+An error on two physical sites probes pair responses that one-site incidence balance cannot determine. Divide $Q_2$ into five bottom five-qubit blocks. A contributing logical normalizer word has the following possible block weights at order thirteen:
+
+| Class | Bottom-block pattern, up to permutation | $W=\sum_bw_b$ | $R=\sum_bw_b^2$ | Forced signed mass |
+|---|---|---:|---:|---:|
+| $A_0$ | $(3,3,3,0,0)$ | 9 | 27 | $143/8$ |
+| $A_1$ | $(5,3,3,0,0)$ | 11 | 43 | $-117/4$ |
+| $A_2$ | $(5,5,3,0,0)$ | 13 | 59 | $243/16$ |
+| $F$ | $(3,3,3,4,0)$ | 13 | 43 | $-45/16$ |
+
+An active logical factor has weight three or five; an inactive stabilizer factor has weight zero or four. This exhausts the contributing patterns at that order. The positive normalized class averages have exact responses whose combination with the displayed masses is one for every physical error through weight two. The [finite construction](../science/two_error_gates.md) therefore has $\ell=13$ and $J/\omega=521/8$ for each axis.
+
+The additional lower-bound tool is a bottom-block twirl $\mathcal W_b$. Its square counts $w_b^2$ on a Pauli word and expands into conjugations by errors of weight at most two. Transparency consequently forces the scalar-free $R$ moment to vanish, alongside the $W$ and $W^2$ moments. The four rows $(1,W,W^2,R)$ determine the four operator masses. Detectable terms compress to zero, stabilizers to scalars, and scalar error-sector shifts disappear, so the argument applies to arbitrary Hermitian competitors. The absolute masses sum to $521/8$. Total weights alone merge $A_2$ and $F$, hiding their opposite signs and giving a weaker bound.
+
+At larger depth the [two-error construction](../science/growing_two_error_gates.md) uses a logical-support tree with $k=d/3$ active bottom blocks. For its uniform-promotion ensemble, write $\rho_{ij}$ for the probability that two specified blocks are active, and $\eta_{ij}$ for the probability that block $i$ is padded by a stabilizer while block $j$ is active. Selecting an inactive frontier subtree uniformly, then a bottom block within it, gives
+
+```math
+\eta_{ij}=\frac{\rho_{ij}}{k-1}.
+```
+
+This is the pair correlation required for that ensemble's two-error cancellation. Uniform selection among all inactive bottom blocks fails at depths above two because pair probabilities depend on the first divergence in the tree. The four-pattern block moments and the construction attain, for every $m\ge2$,
+
+```math
+\ell=d+4,\qquad
+J/\omega=J_2(d)=\frac{4d^2+21d+8}{8}.
+```
+
+The scalar total-weight bound is smaller by $5d/8$. The frontier rule is sufficient for this explicit ensemble; the increment construction in Section 13 provides another optimum with different positive components.
+
+Sparse recursion needs more than a sparse final gate. Each positive component must preserve its complete character response vector $f_T(E)=\mathbb E_{Q\sim T}[\chi(E,Q)]$ through weight two. Splitting a final sparse gate into classes does not automatically give the required individual class profiles. The [positive base certificates](../science/sparse_two_error_synthesis.md#1-positive-class-certificates-at-twenty-five-qubits) check these profiles separately.
+
+When at most two errors touch child factors, exact pairwise product marginals of the child distributions suffice; one-child marginals alone do not. The [rational coupling construction](../science/sparse_two_error_synthesis.md#2-pairwise-coupling-is-sufficient) supplies those product marginals even for unequal rational distributions. Translation-orbit response reduction then gives an exact reference algorithm with polynomial bit complexity and high polynomial degree. This is a theoretical complexity statement, not a fast large-depth runtime guarantee.
+
+Separate exact final certificates use 2,575 native terms at 25 qubits and 69,125 at 125 qubits. Their collected native common denominators have 125 and 1,458 bits. The latter has order 31 and cost $3491/8$. Numerical searches selected finite supports; independent integer and rational calculations check the supplied coefficients, signed logical membership, and every protected response. Support count, exact coefficient size, the search procedure, and physical many-body synthesis remain different costs.
+
+## 12. Seven patterns and the three-error coupling bound
+
+A third physical error can be a nontrivial logical Pauli of a bottom five-qubit block. Its conjugation therefore constrains which outer logical branches occur. On $Q_2$, minimum permitted order is fifteen. The [three-error seed](../science/three_error_gates.md) uses seven complete bottom-block patterns:
+
+| Class | Bottom-block pattern, up to permutation | Forced signed mass at $d=9$ |
+|---|---|---:|
+| $A_0$ | $(3,3,3,0,0)$ | $715/16$ |
+| $A_1$ | $(5,3,3,0,0)$ | $-1755/16$ |
+| $A_2$ | $(5,5,3,0,0)$ | $3645/32$ |
+| $A_3$ | $(5,5,5,0,0)$ | $-1485/32$ |
+| $F_0$ | $(3,3,3,4,0)$ | $-675/32$ |
+| $F_1$ | $(5,3,3,4,0)$ | $675/32$ |
+| $B_5$ | $(3,3,3,3,3)$ | $-3/2$ |
+
+For a bottom weight $w\in\{0,3,4,5\}$, the cubic polynomial
+
+```math
+p(w)=\frac{4w^3-33w^2+68w}{15}
+```
+
+is zero on stabilizer weights and one on nontrivial logical weights. Thus $\sum_bp(w_b)$ counts active outer logical factors. Its scalar-free compression vanishes by the allowed degree-three twirl moments. It equals three on the first six classes and five on $B_5$. Combining this relation with normalization forces $C_{B_5}=-3A/2$. The outer weight-five branch cannot be omitted and repaired by reweighting the other six classes.
+
+For the full lower bound set $W=\sum_bw_b$, $R=\sum_bw_b^2$, and $S=\sum_bw_b^3$. Degree at most three in bottom-block twirls supplies the rows
+
+```math
+(1,W,W^2,W^3,R,WR,S).
+```
+
+Their right-hand side is $(A,0,0,0,0,0,0)$, where $A=[h_L]_0$. Classification of all normalizer words at the order cap gives exactly the seven columns above. The matrix has determinant $2,949,120$, and its unique operator solution has the displayed masses. The [exact dual](../science/three_error_gates.md#5-block-moments-and-the-exact-coupling-lower-bound) takes their signs on all seven columns, certifying the same coupling lower bound. No symmetry of a competing Hamiltonian is assumed.
+
+All normalized class atoms act as the same positive logical axis, so their conjugation characters establish the full physical-space error-image action. The finite certificate checks all 64,876 physical errors through weight three separately for each axis using exact factorization. The dense seed has 1,480,960 native words per axis and a common coefficient denominator of 3,200,000, of bit length 22. These are construction properties, not term-count or hardware precision optima.
+
+The canonical logical Pauli frame is selected by the three physical normalizer cosets. Partitioning each pattern by those disjoint cosets sharpens the norm bound: for $A=\sum_\alpha\Omega_\alpha\alpha$,
+
+```math
+J_{\min}=\frac{2867}{8}\sum_{\alpha=X,Y,Z}|\Omega_\alpha|
+\qquad(\ell=15).
+```
+
+The logical half-splitting is $\omega=(\sum_\alpha\Omega_\alpha^2)^{1/2}$, so the ratio to $\omega$ depends on direction. Changing logical coordinate labels does not freely rotate the prescribed native physical Pauli basis.
+
+## 13. Exact increment lifting and the all-depth optima
+
+The [lifting theorem](../science/growing_three_error_gates.md#1-a-strict-transparency-lifting-theorem) starts with a nested hierarchy of strict child gates $L_{s,\beta}$ through protected weight $s=0,1,2,3$. Define $L_{-1,\beta}=0$ and
+
+```math
+\Delta_{a,\beta}=L_{a,\beta}-L_{a-1,\beta}.
+```
+
+If an error $E$ has weight below $a$, both terms have the same full action on its image. Therefore
+
+```math
+\Delta_{a,\beta}EV=0
+\qquad\text{when }a>\operatorname{wt}(E).
+```
+
+For one positive signed outer weight-three logical representative, tensor the three active child increment polynomials and keep total increment degree at most $t$. Then average over the ten such outer representatives, retaining their signs. Inactive children carry physical identity. This gives the parent $L'_{t,\alpha}$.
+
+To prove strict protection, first take the full tensor product of active $L_{t,\beta}$ factors. It has the correct full action on any parent error image of total weight at most $t$. Expanding each factor into increments, an omitted term has total index above $t$. At least one active child's index exceeds the error weight in that child, so its increment annihilates the corresponding image. Every omitted tensor term is therefore exactly zero there. This proves the full physical-space intertwiner; truncation is in a finite hierarchy index and introduces no approximation to time evolution. The interaction order is at most $3D+2t$ when the child distance is $D$.
+
+For the supplied seed, contributions in the seven patterns have compatible coefficient signs $(+,-,+,-,-,+,-)$. These signs survive lifting through total degree three, so repeated native words add without cancellation. The increment coefficient budgets are
+
+```math
+b_0(d)=1,\qquad b_1(d)=d,\qquad
+b_2(d)=\frac{d(4d+13)}8,\qquad
+b_3(d)=\frac{d(4d^2+39d+107)}{24}.
+```
+
+Cubing their generating polynomial under $d\mapsto3d$ gives the same four coefficient formulas. Summing the increments gives the optimal axis budgets:
+
+| Protected physical weight | Depth | Minimum order on $Q_m$ | Exact axis budget at that order |
+|---:|---|---|---|
+| 1 | $m\ge1$ | $d+2$ | $J_1(d)=d+1$ |
+| 2 | $m\ge2$ | $d+4$ | $J_2(d)=(4d^2+21d+8)/8$ |
+| 3 | $m\ge2$ | $d+6$ | $J_3(d)=(4d^3+51d^2+170d+24)/24$ |
+
+For the three-error lower bound at every depth, the seven bottom-weight patterns remain exhaustive. The same moment rows as in Section 12, now with variable $d$, have the same nonzero determinant. Their forced masses have the construction's signs, and their absolute sum is $J_3(d)$. The arbitrary-Hamiltonian proof allows consistent scalar sector shifts. Resolving logical cosets also gives $J_{\min}=J_3(d)\sum_\alpha|\Omega_\alpha|$ in the fixed canonical frame.
+
+The lifting constructs another optimal two-error realization as part of the hierarchy. Its positive promotion and padding components need not equal those of the earlier uniform-promotion/frontier ensemble. The earlier pair-correlation condition concerned that ensemble and does not preclude this different construction.
+
+The recursive description is short, but its dense native expansion grows rapidly. A safe common native denominator obeys $q_2=3,200,000$ and $q_m=10q_{m-1}^3$, giving bit lengths 22, 69, 208, and 627 at depths two through five, or $O(d)$. These are upper bounds on exact description size, not minimal denominators or physical control precision. A separate response-preserving support argument gives at most
+
+```math
+D_3(n)=1+3n+9\binom n2+27\binom n3=O(n^3)
+```
+
+native terms per axis in principle. It does not supply a practical sparse three-error compiler or an explicit sparse 125-qubit word list. At 125 qubits, eleven complete response profiles cover all 8,649,376 protected errors; the certificate checks those profiles and their coverage rather than a dense native contraction for every error. The all-depth physical-space conclusion follows from the lifting proof.
+
+## 14. Pure logical strings, entanglers, and universal control
+
+On the unchanged product code $Q_m^{\otimes M}$, $m\ge2$, consider a specified logical Pauli string $P_L$ of logical weight $p\ge1$. Its minimum physical representative weight is $D=pd$: each active encoded block needs a nontrivial representative of weight at least $d$, and minimum representatives attain the product. Its weight parity is $p\bmod2$. The ordinary distance of the complete product code is still $d$, since a logical operation can act on one block.
+
+The [protected-string construction](../science/protected_entangling_gates.md) tensors the increments only on active encoded blocks and retains total degree at most three:
+
+```math
+H_{P_L}=\sum_{\substack{a_i\ge0\ (i\in A(P_L))\\\sum_i a_i\le3}}
+\bigotimes_{i\in A(P_L)}\Delta_{a_i,(P_L)_i},
+```
+
+with physical identity on inactive blocks. The omitted-term argument of Section 13 applies to every physical error of total weight at most three, including errors on different encoded blocks and entangled logical inputs. Thus $H_{P_L}EV=EVP_L$ as a full map.
+
+The increment-budget polynomial has an additional additive identity:
+
+```math
+B(x,z)=\sum_{a=0}^3b_a(x)z^a,
+\qquad B(x,z)B(y,z)=B(x+y,z)\pmod{z^4}.
+```
+
+Consequently $p$ active factors have total budget at most $\sum_{a=0}^3b_a(pd)=J_3(D)$ by the triangle inequality. The matching lower bound projects any competing logical operator onto its specified Pauli coefficient with $\pi_{P_L}(A)=2^{-M}\operatorname{Tr}(P_LA)$. Other logical cosets, scalar terms, and detectable terms have zero target projection. Target weights start at $D$ in steps of two, so the projected moments force order at least $D+6$. At that order, the same seven bottom-block patterns and their moment dual apply with $d$ replaced by $D$. They give the reverse cost inequality. Hence, for $h_L=\Omega P_L+cI$ with $\Omega\ne0$,
+
+```math
+\ell_{\min}=pd+6,\qquad
+J_{\min}(\ell=pd+6)=|\Omega|J_3(pd).
+```
+
+This is the pure-string law. It does not assign a globally optimal sum of these budgets to an arbitrary mixed logical Hamiltonian at one common order cap: a lower-weight component can exploit extra allowed locality under a cap chosen for a higher-weight one.
+
+For two $Q_2$ blocks, $P_L=ZZ$ has $D=18$, minimum order 24, and unit-strength budget 1789. Eighteen ordered class pairs specify its dense expansion of 41,032,000,000 words, with collected common denominator 32,000,000,000 of bit length 35. The finite verifier covers all 540,376 physical errors through weight three for each of the nine two-block Pauli axes by complete child response profiles. It does not enumerate that dense word list. Three active $Q_2$ blocks give $D=27$, order 33, and cost $40175/8$; two $Q_3$ blocks give $D=54$, order 60, and cost $32824$.
+
+The two-block logical gate $e^{-i\pi ZZ/4}$ takes $|++\rangle$ to a state with either one-qubit reduced density matrix $I/2$. The six local Pauli generators together with $ZZ$ generate all fifteen nonidentity two-qubit Pauli directions under commutators, hence the full two-qubit unitary Lie algebra after removing global phase. These are protected continuous encoded controls in the declared native Hamiltonian model. At every instant, the applied complete combination must satisfy strict transparency; sequential individual native terms do not inherit this guarantee.
+
+The product code also retains $r_S=\infty$. Each stabilizer has even-weight restriction in every encoded block, while a nontrivial logical string has odd-weight restriction in at least one block. Their supports cannot coincide. An even global logical weight such as $ZZ$ therefore does not create a readout collision; its single-block logical subword also prevents the relevant word from being an even logical circuit.
+
+The resulting picture separates exact encoded control, prescribed-measurement reversibility, and implementation. Gate protection concerns accumulated physical errors within the stated weight set and ideal final recovery. Readout concerns each specified known product unitary followed by ideal original-syndrome measurement and informed recovery. Their coexistence on a fixed code supplies no joint noisy-hardware threshold. Geometric range, many-body synthesis, state preparation, recovery-device faults, efficient decoding, and practical large-depth sparse three-error compilation remain outside the proved resource optima.
