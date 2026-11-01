@@ -436,8 +436,8 @@ For a stabilizer code, write $S$ for the phase-free stabilizer group and $N$ for
 
 ```math
 r_S=\min_{\substack{g\in S,\ L\in N\setminus S\\
-\operatorname{supp}(g)=\operatorname{supp}(L)}}
-\operatorname{wt}(gL),\qquad \min\varnothing=\infty.
+\mathrm{supp}(g)=\mathrm{supp}(L)}}
+\mathrm{wt}(gL),\qquad \min\varnothing=\infty.
 ```
 
 Equal support allows a stabilizer and a logically nontrivial term to enter the same measurement-conditioned expansion. The support criterion and its converse establish the recoverability consequence; equality of supports by itself is not a replacement for that proof. Its [circuit characterization](https://github.com/GoGoKo699/Syndrome-Reversibility-Distance/blob/main/science/support_criterion.md#4-equivalent-characterization-by-even-logical-circuits) identifies $r_S$ with the smallest even logical-circuit weight. A logical circuit is a nontrivial normalizer word with no proper nonempty normalizer subword, keeping its actual local Pauli labels. These are imported research-level ingredients. Preskill's correctability and stabilizer sections provide their language, while the cited readout account supplies these theorems.
@@ -588,7 +588,7 @@ If an error $E$ has weight below $a$, both terms have the same full action on it
 
 ```math
 \Delta_{a,\beta}EV=0
-\qquad\text{when }a>\operatorname{wt}(E).
+\qquad\text{when }a>\mathrm{wt}(E).
 ```
 
 For one positive signed outer weight-three logical representative, tensor the three active child increment polynomials and keep total increment degree at most $t$. Then average over the ten such outer representatives, retaining their signs. Inactive children carry physical identity. This gives the parent $L'_{t,\alpha}$.
@@ -643,7 +643,7 @@ B(x,z)=\sum_{a=0}^3b_a(x)z^a,
 \qquad B(x,z)B(y,z)=B(x+y,z)\pmod{z^4}.
 ```
 
-Consequently $p$ active factors have total budget at most $\sum_{a=0}^3b_a(pd)=J_3(D)$ by the triangle inequality. The matching lower bound projects any competing logical operator onto its specified Pauli coefficient with $\pi_{P_L}(A)=2^{-M}\operatorname{Tr}(P_LA)$. Other logical cosets, scalar terms, and detectable terms have zero target projection. Target weights start at $D$ in steps of two, so the projected moments force order at least $D+6$. At that order, the same seven bottom-block patterns and their moment dual apply with $d$ replaced by $D$. They give the reverse cost inequality. Hence, for $h_L=\Omega P_L+cI$ with $\Omega\ne0$,
+Consequently $p$ active factors have total budget at most $\sum_{a=0}^3b_a(pd)=J_3(D)$ by the triangle inequality. The matching lower bound projects any competing logical operator onto its specified Pauli coefficient with $\pi_{P_L}(A)=2^{-M}\mathrm{Tr}(P_LA)$. Other logical cosets, scalar terms, and detectable terms have zero target projection. Target weights start at $D$ in steps of two, so the projected moments force order at least $D+6$. At that order, the same seven bottom-block patterns and their moment dual apply with $d$ replaced by $D$. They give the reverse cost inequality. Hence, for $h_L=\Omega P_L+cI$ with $\Omega\ne0$,
 
 ```math
 \ell_{\min}=pd+6,\qquad

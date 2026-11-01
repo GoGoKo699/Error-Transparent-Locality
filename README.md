@@ -10,7 +10,7 @@ Let a fixed code have detection distance $d$ and encoding $V$. A Hermitian, code
 
 ```math
 HEV=EV(h_L+c_E I)
-\qquad\text{for every tensor Pauli }E\text{ with }\operatorname{wt}(E)\le t.
+\qquad\text{for every tensor Pauli }E\text{ with }\mathrm{wt}(E)\le t.
 ```
 
 The lower bounds allow consistent scalar sector shifts $c_E$; the explicit constructions satisfy the strict identity with every $c_E=0$. This is a full physical-space equality, including preservation of each error image. With ideal final recovery, it preserves the intended logical evolution independently of the fault time.

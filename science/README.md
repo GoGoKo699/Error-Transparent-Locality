@@ -10,7 +10,7 @@ Let $V$ encode a fixed code of detection distance $d$. A Hermitian, code-preserv
 
 ```math
 HEV=EV(h_L+c_E I)
-\qquad\text{for every tensor Pauli }E\text{ with }\operatorname{wt}(E)\le t.
+\qquad\text{for every tensor Pauli }E\text{ with }\mathrm{wt}(E)\le t.
 ```
 
 The lower bounds permit consistent real scalar shifts, with $c_I=0$. All supplied constructions are strict, with every $c_E=0$. The identity holds into the full physical Hilbert space; logical compression alone would not exclude leakage from an error image. Ideal final recovery restores the intended logical evolution. Multiple faults are covered while every accumulated error remains in the protected set.
