@@ -4,6 +4,8 @@
 
 A correctable fault during a gate can change the logical evolution rate until recovery. Exact error transparency removes this timing dependence: the physical Hamiltonian implements the same logical generator in the code and every protected error image. This repository proves general interaction-order and native coupling bounds, gives a sharp four-body witness, and constructs resource-optimal protected controls and entanglers on fixed concatenated five-qubit codes.
 
+**Sister project within Protected Gates and Syndrome Readout:** [Syndrome Reversibility Distance](https://github.com/GoGoKo699/Syndrome-Reversibility-Distance) classifies when the original syndrome measurement loses logical information after a known product unitary. A [shared gate/readout theorem](science/gate_readout_tradeoff.md) connects their requirements on a fixed code, under separate gate and readout assumptions.
+
 ## General resource bounds
 
 Let a fixed code have detection distance $d$ and encoding $V$. A Hermitian, code-preserving Hamiltonian is transparent through Pauli-error weight $t$ when
@@ -43,7 +45,7 @@ The higher-error coupling proofs resolve interaction weights inside code blocks 
 
 Native term count is a separate resource. The [single-error sparse recursion](science/sparse_protected_gates.md) uses at most $4n$ terms per axis with $O(\log n)$ coefficient bits; a separate support bound is $3n+1$. The [two-error sparse synthesis](science/sparse_two_error_synthesis.md) supplies a 69,125-term optimal gate on 125 qubits. The [scientific overview](science/README.md#construction-and-description-costs) compares the finite witnesses, coefficient sizes, and exact coverage certificates.
 
-These codes also have syndrome reversibility distance $r_S=\infty$. The complementary question in [Syndrome Reversibility Distance](https://github.com/GoGoKo699/Syndrome-Reversibility-Distance) is whether a **known product unitary**, followed by full ideal measurement of the **original** stabilizer syndrome, can be reversed by informed recovery. The [joint theorem](science/gate_readout_tradeoff.md) shows that for odd-distance stabilizer codes, attaining the unrestricted gate order $\ell=d+t$ forces $r_S=d+1$. Thus $r_S>d+1$ requires $\ell\ge d+t+1$. The gate and readout statements retain their separate experiments and do not establish a joint noisy threshold.
+These codes also have syndrome reversibility distance $r_S=\infty$: every **known product unitary** is recoverable after full ideal measurement of the **original** stabilizer syndrome, with recovery informed of that unitary. For odd-distance stabilizer codes with $d\ge3$, $t\ge1$ and $d\ge2t+1$, attaining the unrestricted gate order $\ell=d+t$ forces $r_S=d+1$. Thus $r_S>d+1$ requires $\ell\ge d+t+1$. The coexistence of these guarantees does not establish a joint noisy threshold.
 
 ## Protected entanglers on fixed product codes
 
@@ -69,7 +71,7 @@ The first entangler's compact dense specification contains **41,032,000,000 nati
 | Study from the shared educational anchor | [Learning guide](learning/README.md), [Preskill bridge](learning/PRESKILL_BRIDGE.md), and [30 milestones](learning/MILESTONES.md) |
 | Check attribution and nearest precedents | [Related work](references/RELATED_WORK.md) and [bibliography](references/references.bib) |
 
-The single educational anchor, shared with [Syndrome Reversibility Distance](https://github.com/GoGoKo699/Syndrome-Reversibility-Distance), is **John Preskill, _Quantum Information_, Chapter 7, “Quantum Error Correction”**, in the author-hosted draft updated March 2026. Each project has its own Preskill bridge and 30-milestone map. This project's bridge selects relevant sections and translates notation and Pauli phases; its twelve background and eighteen narrative milestones follow the dependencies through protected entanglers and universal encoded control. The [sister project's Preskill bridge](https://github.com/GoGoKo699/Syndrome-Reversibility-Distance/blob/main/learning/PRESKILL_BRIDGE.md) develops the separate syndrome-readout argument from the same foundation.
+The shared educational anchor is **John Preskill, _Quantum Information_, Chapter 7, “Quantum Error Correction”**, in the author-hosted draft updated March 2026. This project's bridge selects relevant sections and translates notation and Pauli phases; its twelve background and eighteen narrative milestones lead through protected entanglers and universal encoded control. The [sister project's Preskill bridge](https://github.com/GoGoKo699/Syndrome-Reversibility-Distance/blob/main/learning/PRESKILL_BRIDGE.md) follows the readout argument with its own 30-milestone map.
 
 ## Reproduce the certificates
 
