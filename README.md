@@ -4,7 +4,14 @@
 
 A correctable fault during a gate can change the logical evolution rate until recovery. Exact error transparency removes this timing dependence: the physical Hamiltonian implements the same logical generator in the code and every protected error image. This repository proves general interaction-order and native coupling bounds, gives a sharp four-body witness, and constructs resource-optimal protected controls and entanglers on fixed concatenated five-qubit codes.
 
-**Sister project within Protected Gates and Syndrome Readout:** [Syndrome Reversibility Distance](https://github.com/GoGoKo699/Syndrome-Reversibility-Distance) classifies when the original syndrome measurement loses logical information after a known product unitary. A [shared gate/readout theorem](science/gate_readout_tradeoff.md) connects their requirements on a fixed code, under separate gate and readout assumptions.
+## Sister projects: Protected Gates and Syndrome Readout
+
+| Sister repository | Central question |
+|---|---|
+| **[Error-Transparent Locality](https://github.com/GoGoKo699/Error-Transparent-Locality) (this repository)** | Which native interaction order and coupling budget let a logical gate tolerate faults at unknown times? |
+| **[Syndrome Reversibility Distance](https://github.com/GoGoKo699/Syndrome-Reversibility-Distance)** | When does the original syndrome measurement preserve logical information after a known product unitary? |
+
+The [shared gate/readout theorem](science/gate_readout_tradeoff.md) connects the two requirements on a fixed code. The gate and readout models retain separate assumptions.
 
 ## General resource bounds
 
